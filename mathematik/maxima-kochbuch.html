@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd"> 
+ 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+	<head>
+		<title>Maxima-Kochbuch</title>
+		<meta name="author" content="Stefan Birkner"/>
+		<meta name="keywords" content="maxima, kochbuch, cookbook"/>
+		<link rel="stylesheet" type="text/css" href="../sb.css"/>
+	</head> 
+ 
+	<body> 
+		<h1>Maxima-Kochbuch</h1>
+
+		<p>
+			Diese Seite enthält eine Sammlung von Rezepten, wie man mathematische Probleme mit dem <a href="http://de.wikipedia.org/wiki/Computer-Algebra-System">Computer-Algebra-System</a> <a href="http://maxima.sourceforge.net/">Maxima</a> löst.
+		</p>
+		
+		<h4>Ploynom-Division</h4>
+		<h5>Problemstellung</h5>
+		<p>Es sind die beiden Polynome p = 3x<sub>4</sub> + 4x<sub>3</sub> - 4x<sub>2</sub> + 4x - 7 und q = x<sub>2</sub> + 1 gegeben. Gesucht ist das Polynom s=p/q.</p>
+		<h5>Lösung</h5>
+		<p>
+			Die beiden Polynome p und q werden in Maxima definiert:
+			<ul>
+				<li> p: 3 * x^4 + 4 * x^3 - 4 * x^2 + 4 * x - 7;</li>
+				<li>q: x^2 + 1;</li>
+			</ul>
+			Den Quotienten p/q erhalten wir nun durch die Eingabe divide(p,q);
+		</p>
+
+		<p>[<a href="../">zur&uuml;ck zur Homepage</a>]</p>
+	</body>
+</html>

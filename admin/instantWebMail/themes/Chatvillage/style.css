@@ -1,0 +1,72 @@
+body, th, td, input, select, textarea {
+	font-family: verdana;
+	font-size: 11px;
+}
+body {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background: #6A7B8B;
+	color: black;
+}
+a:link {
+	text-decoration: none;
+	color: black;
+}
+a:active {
+	text-decoration: none;
+	color: black;
+}
+a:visited {
+	text-decoration: none;
+	color: black;
+}
+a:hover {
+	background-color: #6A7B8B;
+}
+table {
+	width: 100%;
+	background: black;
+}
+.tableAutoWidth {
+	width: auto;
+}
+th, td {
+	padding: 2px;
+	vertical-align: top;
+}
+th {
+	text-align: left;
+	background: #6B706C;
+	color: #111177;
+}
+td {
+	background: #415369;
+	color: white;
+}
+input, textarea {
+	width: 200px;
+}
+textarea {
+	height: 60px;
+}
+.button, .lowCheckBox {
+	width: auto;
+}
+.lowCheckBox {
+	height: 11px;
+}
+#importantHeaders {
+	display: block;
+}
+#allHeaders {
+	display: none;
+}
+#textareaWrite {
+	width: 100%;
+	height: 200px;
+}
+#inputFrameSize {
+	width: 20px;
+}

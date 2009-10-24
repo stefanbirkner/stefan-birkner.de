@@ -1,0 +1,59 @@
+<STYLE>
+.navheadlight {
+ background: #9999cc;
+}
+ 
+.navheaddark {
+ background: #666699;
+}
+ 
+.navseperator {
+ background: #333366;
+}
+ 
+.navtablehead  {
+  background: #003196;
+}
+ 
+.navtablesubhead {
+  background: #ffffff;
+}
+ 
+.navtablesubtitle {
+  font-family: ariel, helvetica, sans serif;
+  font-size: 8pt;
+  color: #0000cc;
+  background: #9999cc;
+  font-weight: bold;
+  text-align: center;  
+}
+.navtabletitlehead {
+  font-family: sans serif, helvetica, arial;
+  font-size: 10pt;
+  background: #666699;
+  color: #FFFFFF;
+  font-weight: bold;
+  text-align: center;
+ 
+}
+ 
+.navtablebarleft  {
+  background-image: url('/phphtmllib/widgets/images/top-left-corner.gif');
+  background-repeat: no-repeat;
+  background-color: #666699;
+}
+.navtablebarright {
+  background-image: url('/phphtmllib/widgets/images/top-right-corner.gif');
+  background-repeat: no-repeat;
+  background-color: #666699;
+}
+.navtablediv {
+  line-height: 11px;
+  font-family: Arial, helvetica, sans serif;
+  font-size: 10pt;
+}
+.navtableheight {
+  font-size:4pt;
+  line-height:3px;
+}
+</STYLE>
