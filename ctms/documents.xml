@@ -1,0 +1,38 @@
+<documents>
+	<section>
+		<title>Softwarebeschreibung</title>
+		<document href="glossary.htm">Glossar</document>
+		<document href="datamodell.htm">Datenmodell (Pflichtenheft)</document>
+		<document href="database.htm">Datenbankstruktur (Pflichtenheft)</document>
+		<document href="archtektur.htm">Architektur (Pflichtenheft)</document>
+		<document href="classdiagram.html">Klassendiagramm (Ist)</document>
+		<document href="apidoc.zip">API-Dokumentation (Ist)</document>
+	</section>
+	<section>
+		<title>Wichtige Dokumente</title>
+		<document href="pflichtenheft.pdf">Pflichtenheft.pdf</document>
+		<document href="Zwischenpräsentation.pdf">Zwischenpräsentation</document>
+		<document href="aenderungsdokument.pdf">Änderungsdokument</document>
+		<document href="installation.pdf">Installationsanleitung</document>
+	</section>
+	<section>
+		<title>Protokolle</title>
+		<document href="Protokolle/Sopra_01_09_05.txt">01.09.2005</document>
+		<document href="Protokolle/Sopra_07_09_05.txt">07.09.2005</document>
+		<document href="Protokolle/Sopra_12_09_05.txt">12.09.2005</document>
+		<document href="Protokolle/Sopra_13_09_05.txt">13.09.2005</document>
+		<document href="Protokolle/Sopra_14_09_05.txt">14.09.2005</document>
+		<document href="Protokolle/Sopra_15_09_05.txt">15.09.2005</document>
+		<document href="Protokolle/Sopra_16_09_05.txt">16.09.2005</document>
+		<document href="Protokolle/Sopra_19_09_05.txt">19.09.2005</document>
+		<document href="Protokolle/Sopra_27_09_05.txt">27.09.2005</document>
+	</section>
+	<section>
+		<title>Testfälle</title>
+		<document href="tests/test case Admin-Funktionen">Admin-Funktionen</document>
+		<document href="tests/test cases Kategorie erstellen">Kategorie erstellen</document>
+		<document href="tests/test cases Klientenverwaltung">Klientenverwaltung</document>
+		<document href="tests/test cases Periode erstellen">Periode erstellen</document>
+		<document href="tests/test cases Subprogramm erstellen">Subprogramm erstellen</document>
+	</section>
+</documents>

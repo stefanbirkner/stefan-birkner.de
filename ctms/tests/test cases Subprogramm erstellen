@@ -1,0 +1,88 @@
+Testprotokoll
+Projekt: CTMS (Computergestütztes Therapie Management System)
+Autor: Sopra SS2005, Gruppe 1
+Letzte Änderung: 27.10.2005
+
+Übersicht
+Testobjekt:Subprogramm erstellen
+Testdatum: 27.10.2005
+
+
+Vorbedingungen: Periode wurde erstellt
+
+
+---------------------------------------------------------------------
+Testfall 1: Subprogramm vom Typ "word" erstellen
+
+Vorgangsbeschreibung: Der Benutzer wählt die Karteikarte "word" aus, gibt das 
+Startdatum und die Subprogrammspezifischen Parameter ein. 
+
+Erwartetes Ereignis: Die Eingaben des Benutzers erscheinen in entsprechenden 
+Feldern. 
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+Testfall 2: Subprogramm vom Typ "sentence" erstellen
+ 
+
+Vorgangsbeschreibung: Der Benutzer wählt die Karteikarte "sentence" aus, gibt das 
+Startdatum und die Subprogrammspezifischen Parameter ein.  
+
+
+Erwartetes Ereignis: Die Eingaben des Benutzers erscheinen in entsprechenden 
+Feldern. 
+  
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+
+Testfall 3: Subprogramm vom Typ "Bit" erstellen
+
+ 
+Vorgangsbeschreibung:Der Benutzer wählt die Karteikarte "Bit" aus und gibt das 
+Startdatum ein.
+
+Erwartetes Ereignis:Das Startdstum des Subprogramms erscheint im Eingabefeld.
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+
+Testfall 4: Subprogramm "book" erstellen
+
+Vorgangsbeschreibung:Der Benutzer wählt die Karteikarte "book" aus und gibt das 
+Startdatum ein.
+
+Erwartetes Ereignis: Das Startdstum des Subprogramms erscheint im Eingabefeld.
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+------------------------------------------------------------------------
+
+Testfall 5: Subprogramm bearbeiten
+
+Vorgangsbeschreibung: Der Benutzer wählt ein Subprogramm aus, klickt auf den Button 
+"Subprogramm ansehen/bearbeiten" und ändert die eingegebenen Daten.
+
+Erwartetes Ereignie: Das Programm öffnet ein Dialog um die Änderungen zu übernehmen.
+
+ Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+ 
+--------------------------------------------------------------------------------
+
+Testfall 6: Subprogramm löschen
+
+ Vorgangsbeschreibung: Der Benutzer wählt ein Subprogramm aus, klickt auf den Button
+ "Subprogramm löschen" und bestätigt dieses.
+ 
+ Erwartetes Ergebnis: Ein Bestätigungsdialog öffnet sich und nach der Betätigung des
+"OK"-Buttons wird das Subprogramm aus der Liste gelöscht.
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt   

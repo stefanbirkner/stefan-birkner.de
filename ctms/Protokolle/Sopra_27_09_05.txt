@@ -1,0 +1,67 @@
+Sopra Protokoll 15.09.05
+
+Start: 9:30
+
+Ende:
+
+Teilnehmer:
+
+Hermbecker	Jan-Michel
+Nientit		Manuel
+Redchenko	Illya
+Birkner		Stefan
+Tchiyanou	Edith
+Le		Dinh Khoi Nguyen
+Richert		Manuel
+Richert		Natalie
+Nepp		Larissa
+
+
+
+Aufgaben:
+----------------------------------------------------
+
+Verteilung der Arbeitspakete:
+
+----------------------------------------------------
+
+
+
+Vorschaumodus: Richert, Natalie; Nepp Larissa
+
+
+
+Perpektivische Mauer:
+
+
+
+Präsentationsmodus: Richert Manuel; Hermbecker Jan-Michel
+
+
+
+Dokumentation:
+
+
+
+Java.Doc:
+
+
+
+Datenbanken:
+
+
+
+
+
+----------------------------------------------------
+Allgemeine Richtlinien:
+
+- Alles wird dokumentiert
+- Dokumentation Englisch
+
+- Programmierumgebung ist ECLIPSE
+
+
+
+
+

@@ -1,0 +1,42 @@
+Testprotokoll
+Projekt: CTMS (Computergestütztes Therapie Management System)
+Autor: Sopra SS2005, Gruppe 1
+Letzte Änderung: 27.10.2005
+
+Übersicht
+Testobjekt: Kategorien erstellen
+Tester: Larissa Nepp, Manuel Richert
+Testdatum: 27.10.2005
+
+
+Vorbedingungen: Subprogramm wurde erstellt
+
+
+---------------------------------------------------------------------
+Testfall 1: Kategorie vom Typ "word" erstellen
+
+Vorgangsbeschreibung: Der Benutzer wählt die Karteikarte "word" aus, klickt 
+auf den Button "Neue Kategorie erstellen", gibt den Titel der Kategorie und
+die Inhalte der einzelnen Word-Karten ein. 
+
+Erwartetes Ereignis: Das Progrmm öffnet  ein Dialog mit einem Vorschaufenster,
+in dem der eingegebener Text nach den in der Subprogramm eingerichteten Parametern 
+erscheint. 
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+Testfall 1: Kategorie vom Typ "sentence" erstellen
+
+Vorgangsbeschreibung: Der Benutzer wählt die Karteikarte "sentence" aus, klickt 
+auf den Button "Neue Kategorie erstellen", gibt den Titel der Kategorie und
+die Inhalte der einzelnen Sentence-Karten ein. 
+
+Erwartetes Ereignis: Das Progrmm öffnet  ein Dialog mit einem Vorschaufenster,
+in dem der eingegebener Text nach den in der Subprogramm eingerichteten Parametern 
+erscheint. 
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+

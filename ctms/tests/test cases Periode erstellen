@@ -1,0 +1,106 @@
+
+Testprotokoll
+Projekt: CTMS (Computergestütztes Therapie Management System)
+Autor: Sopra SS2005, Gruppe 1
+Letzte Änderung: 26.10.2005
+
+Übersicht
+Testobjekt:Periode erstellen
+Tester: Larissa Nepp
+Testdatum: 26.10.2005
+
+
+Vorbedingungen: Das Fenster des Klienten ist geöffnet.
+
+
+---------------------------------------------------------------------
+Testfall 1: Typ der Periode bestimmen
+
+Vorgangsbeschreibung: Der Benutzer klickt auf den Button "Neue Periode erstellen", 
+wählt den gewünschten Periodentyp und bestätigt dieses anschließend.
+
+
+Erwartetes Ereignis: Das Programm öffnet ein Fenster mit drei Auswahlmöglichkeiten .
+Durch das Klicken auf „OK“ schließt sich das Fenster und der neue Periodentyp erscheint 
+in der dem Klient zugeodneten Perioden-Liste. 
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+Testfall 2: Strong-Periode  bearbeiten
+
+Vorgangsbeschreibung: Der Benutzer markiert eine Periode in der Liste, klickt auf den 
+Button "Periode ansehen/bearbeiten" und legt das Startdatum der Periode, Startdatum der
+ Evaluierungsphase und Enddatum der Evaluierungsphase fest.  
+
+Erwartetes Ereignis: Das Programm öffnet ein Fenster zum Bearbeiten einer Periode.
+Durch den Klick auf die Menü-Bar erscheint ein Kalender,auf dem das Startdatum der Periode
+markiert werden kann. Im Feld "Beginn der Periode"erscheint das ausgewählte Datum. Analog
+geht es für das Start- und Enddatum der Evaluierungsphase.
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+
+Testfall 3: Strong-Periode bearbeiten, wobei als Startdatum ein auserhalb des
+gewählten Monats liegender Tag genommen wird. 
+ 
+Vorgangsbeschreibung: Der Benutzer markiert eine Periode in der Liste, klickt auf den 
+Button "Periode ansehen/bearbeiten" und legt den Startdatum der Periode fest.  
+
+
+Erwartetes Ereignis: Das Programm öffnet ein Fenster mit dem Menü-Button 
+"Beginn der Periode". Durch den Klick auf den Button erscheint ein Kalender,
+auf dem kein Startdatum der Periode markiert wird.Im Feld "Beginn der Periode"
+erscheint ebenfalls kein Datum. 
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+
+Testfall 4: Relax-Periode bearbeiten
+
+Vorgangsbeschreibung:
+
+Erwartetes Ereignis: 
+
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+---------------------------------------------------------------------------
+Testfall 5:. 
+ 
+Vorgangsbeschreibung:   
+
+
+Erwartetes Ereignis: 
+
+ 
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+
+Testfall 6: Periode löschen
+
+Vorgangsbeschreibung: Der Benutzer markiert die Periode in der Liste, klickt auf den
+"Periode löschen" - Button.
+
+Erwartetes Ereignis: Ein Bestätigungs-Dialog öffnet sich und nach der Betätigung des 
+"OK"- Buttons wird die Periode aus der Liste gelöscht.
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+
+Testfall 7:Periode löschen, die noch nicht bearbeitet wurde
+
+Vorgangsbeschreibung: Der Benutzer markiert die Periode in der Liste, klickt auf den
+"Periode löschen" - Button.
+
+Erwartetes Ereignis: Eine Fehlermeldung erscheint.
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt

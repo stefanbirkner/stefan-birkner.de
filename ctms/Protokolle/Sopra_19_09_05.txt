@@ -1,0 +1,45 @@
+Protokoll zur Betreuerbesprechung Softwarepraktikum
+
+Datum: 19.09.05
+Beginn: 10:50		Ende: 11:50
+Raum: P1.6.11
+Anwesende:
+	Mitglieder der Gruppe 1
+	Betreuer Matthias Schnelte
+
+Dieses Meeting diente dazu, den aktuellen Stand der Arbeit zu kontrollieren und offene Fragen zur anstehenden Präsentation zu beantworten. 
+Dabei kamen die folgenden Themen zur Sprache:
+
+Pflichtenheft
+
+	Matthias wies darauf hin, dass die Use-Cases sinnvollerweise vor den Aktivitätendiagrammen erscheinen sollen, da die diese präzisieren sollen
+	Matthias betonte mehrfach, dass der Umfang des Pflichtenheftes auf 30 Seiten zu beschränken sei, aber dennoch vollständig zu sein habe
+	Insbesondere kam die Sprache auf das Sollkonzept und worauf die Gruppe sich besonders konzentrieren wolle:
+
+		Kalenderfunktion
+		Books
+		Nebenbei solle die allgemeine Usability verbessert werden. Dazu allerdings keine Schwerpunkte
+
+	Ein Rat von Matthias war es, das Sollkonzept mit GUI-Entwürfen zu visualisieren
+
+Im anbetracht der anstehenden Zwischenpräsentation am kommenden Donnerstag gab es auch hier Fragen:
+	
+	Es folgte als erstes der Hinweis auf die Website des Lehrstuhls auf der neue Hinweise zur Verfügung stehen
+	Die Präsentation erfolgt über einen Beamer
+	Es stehen 15min Zeit zur Verfügung- nach spätestens 18min wird die Präsentation abgebrochen
+	Es gab einen Hinweis zur Struktur der Präsentation, die folgendermaßen auszusehen habe:
+	
+		Aufgabenstellung (Folien 2-4)
+		Anforderung/Soll Konzept (5-6)
+		Re-Design (7-9)
+		Zusammenfassung und Ausblick (10)
+
+	Sie muss dabei nicht genau diesen Umfang haben, sollte aber diese Struktur haben
+	Auch hier erfolgte der Hinweis, so viele Screenshots wie möglich zu verwenden
+
+Anstehende Aufgaben: Pflichtenheft fertig stellen und Matthias zuschicken (Verantwortlicher: Jan-Michel Hermbecker)
+
+Nächstes Treffen mit Matthias: 21.09.05 in P1.6.11
+Nächstes Treffen der Gruppe: 20.09.05 in der FÜ
+
+Protokoll- verantwortlicher: Manuel Nientit

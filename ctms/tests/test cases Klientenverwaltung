@@ -1,0 +1,64 @@
+
+
+Testprotokoll
+Projekt: CTMS (Computergestütztes Therapie Management System)
+Autor: Sopra SS2005, Gruppe 1
+Letzte Änderung: 25.10.2005
+
+Übersicht
+Testobjekt: Klientenverwaltung
+Testdatum: 25.10.2005
+
+
+Vorbedingungen: Der Benutzer ist als Therapeut eingeloggt.
+
+
+---------------------------------------------------------------------
+Testfall 1: Klienten anlegen
+
+Vorgangsbeschreibung: Der Benutzer klickt auf den „Neuen Klient erstellen“-Button,
+gibt den Namen des Klienten ein und bestätigt dies mit „OK“.
+
+
+Erwartetes Ereignis: Das Programm öffnet ein Fenster zum Eingeben des Namens des
+Klienten . Durch das Klicken auf „OK“ schließt sich das Fenster und der neue Name
+erscheint in der Klienten-Liste des aktuellen Therapeuten. 
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+Testfall 2: Der eingegebener Name existiert schon in der Klientenliste
+
+Vorgangsbeschreibung: Der Benutzer klickt auf den „Neuen Klient erstellen“-Button
+und gibt den Namen des Klienten ein.
+
+Erwartetes Ereignis: Das Program reagiert nicht.
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+-----------------------------------------------------------------------
+Testfall 3: Klienten bearbeiten
+
+Vorgangsbeschreibung: Der Benutzer markiert den Namen des Klienten, klickt auf 
+"Klient anzeigen“ - Button, führt die Einstellungen durch und geht je nach der
+Aufgabe zu „Neue Periode erstellen“, „Periode ansehen/bearbeiten“ oder „Periode
+löschen“.  
+
+
+Erwartetes Ereignis: Das Programm öffnet ein Fenster mit Pausen- und Kartengrößen-Einstellungen und weiteren Optionen, eine Periode erstellen/bearbeiten/löschen .
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+Testfall 3: Klienten löschen
+
+Vorgangsbeschreibung: Der Benutzer markiert den Namen des Klienten, klickt auf den „Klienten löschen" –Button und bestätigt dieses.
+
+
+Mögliche Fehlermeldungen:
+Erwartetes Ereignis: Ein Bestätigungs-Dialog öffnet sich und nach Betätigung 	des "OK"- Buttons wird der Klient aus der Liste der vorhandenen Klienten gelöscht.
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt

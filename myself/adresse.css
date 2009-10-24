@@ -1,0 +1,23 @@
+/* file:                 adresse.css                                   */ 
+/* author:               Stefan Birkner                                */ 
+/* date of creation:     24.05.2000                                    */ 
+/* date of last change:  20.01.2002                                    */ 
+/* abstract:             Diese css-Datei enthaelt Ergänzungen zum      */
+/*                       Stylesheet main.css, die fuer Seiten zu       */
+/*                       meiner Person benoetigt werden                */ 
+ 
+td,th {
+	text-align:center; 
+	alignment:center; } 
+ 
+td.colored, th {
+	color:#000000; 
+	border-color:#BFBFBF; 
+	border-style:solid; 
+	border-width:thin; } 
+ 
+td.colored {
+	background-color:#90e090; } 
+ 
+th {
+	background-color:#44ccff; } 

@@ -1,0 +1,7 @@
+AuthUserFile /home/stefanbirk/www/admin/.htpasswd
+AuthGroupFile /dev/null
+AuthName ByPassword
+AuthType Basic
+<Limit GET POST>
+require valid-user
+</Limit>

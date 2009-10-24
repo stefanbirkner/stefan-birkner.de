@@ -1,0 +1,5 @@
+\select@language {ngerman}
+\contentsline {section}{\numberline {1}\"Anderungen im Datenmodell}{1}{section.1}
+\contentsline {section}{\numberline {2}Persistenzstrategie}{1}{section.2}
+\contentsline {section}{\numberline {3}Nicht umgesetzte Anforderungen}{1}{section.3}
+\contentsline {section}{\numberline {4}Nicht vollst\"andig umgesetzte Anforderungen}{2}{section.4}

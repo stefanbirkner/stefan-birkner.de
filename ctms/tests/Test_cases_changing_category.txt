@@ -1,0 +1,107 @@
+Testf�lle Kategorien bearbeiten:
+
+Vorbedingungen:
+
+- Es muss einen Therapeuten geben, dieser muss authentifiziert sein
+- Der Therapeut muss Klienten haben
+- Der Klient muss Perioden haben
+- F�uer die Periode m�uessen Subprogramme existieren, die die entsprechenden Kategorien enthalten
+- Die jeweiligen Kategorien m�ssen angelegt sein
+
+
+
+Wordkategorie bearbeiten
+
+Testfall 1
+
+Bearbeitungsbildschirm aufrufen
+
+Beschreibung des Ablaufs:
+Der User wae�hlt aus der Liste eine Kategorie und klickt auf Kategorie bearbeiten
+
+Erwartetes Ergebnis: Es �ffnet sich ein Fenster wie beim Anlegen der Kategorie, jedoch werden hier bereits alle angelegten Karten mit angezeigt. Die Liste der Karten zeigt so viele Karten, wie f�r das Subprogramm eingestellt wurde. Die Karten, fue�r die es bereits Inhalt gibt sollten einen Titel anzeigen. Anklicken der jeweiligen Karte zeigt den Inhalt der Karte.
+
+Testfall 2
+
+Titel �aendern
+
+Vorbedingung: Der Bearbeitungsbildschirm f�uer die Kategorie muss geoe�ffnet sein
+
+Beschreibung des Ablaufs: Der Titel wird geae�ndert. Daraufhin wird die Kategorie geschlossen.
+
+Erwartetes Ergebnis: Die Kategorie erscheint nun mit dem neuen Titel
+
+Testfall 3
+
+Kartentext �aendern
+
+Vorbedingung: Das Fenster zur Bearbeitung einer Kategorie muss geoe�ffnet sein
+
+Beschreibung des Ablaufs: Der Kartentext einer zuf�aellig gew�aehlten Karte wird geae�ndert. Daraufhin wird das Bearbeitungsfenster geschlossen.
+
+Erwartetes Ergebnis: Ein weiteres �Oeffnen der Kategorie zeigt den verae�nderten Kartentext
+
+
+Bitkategorie �aendern:
+
+Auch f�uer die Bitkategorie sollten die Testf�aelle 1-3 durchgespielt werden. Speziell fue�r die Bitkategorie gibt es noch einen weiteren Testfall
+
+Testfall 4:
+
+Bild l�oeschen
+
+Vorbedingung: Das Bearbeitungsfenster der Kategorie ist ge�ffnet
+
+Beschreibung des Ablaufs: Eine zufae�llige Karte der ge�oeffneten Kategorie wird durch Klick auf den Button: "Bild entfernen" geloe�scht. Danach wird das Bearbeitungsfenster geschlossen.
+
+Erwartetes Ergebnis: Erneutes Oe�ffnen der Kategorie sollte zeigen, dass die Karte kein Bild mehr hat
+
+Testfall 5:
+
+Bild �aendern
+
+Vorbedingung: Eine Bitkategorie mit Bildern sollte geoe�ffnet sein.
+
+Beschreibung des Ablaufs: Eine Karte wird zuf�aellig gewae�hlt. Es wird durch Klick auf: "Neues Bild zuweisen" ein neues Bild zugewiesen. Anschlie�ssend wird das Bearbeitungsfenster schlossen.
+
+Erwartetes Ergebnis: Ein erneutes Oe�ffnen der Kategorie und anzeigen der Karte sollte das neue Bild zeigen
+
+
+Buch Kategorie �aendern:
+
+Wir testen hier ebenfalls den Testfall 1 und 2
+
+Testfall 6:
+
+Textmodul entfernen
+
+Vorbedingung: Eine bereits angelegte Buchkategorie ist ge�oeffnet.
+
+Ablauf: Auf einer beliebigen Seite wird ein Textmodul ausgewae�hlt und entfernt. Danach wird das Bearbeitungsfenster geschlossen
+
+Erwartetes Ergebnis: Erneutes �Oeffnen der Kategorie zeigt, dass auf der ge�nderten Seite nun ein Textmodul weniger steht
+
+Testfall 7:
+
+Textmodul ae�ndern: 
+
+Vorbedingung: Eine bereits angelegte Buchkategorie ist ge�oeffnet.
+
+Ablauf: Auf einer beliebigen Seite wird ein beliebiges Textmodul gew�hlt und ge�aendert. Danach wird die Bearbeitung beendet.
+
+Erwartetes Ergebnis: Ein erneutes �Oeffnen der Kategorie zeigt das Textmodul ver�aendert
+
+
+FactBook �aendern
+
+Es wird zuerst Testfall 1 und 2 angewandt.
+
+Da das Factbook au�sserdem ein Bild enth�aelt testen wir wie in Testfall 4 und 5.
+
+Fue�r die Factseiten testen wir die Testfae�lle 6 und 7.
+
+Factcard �aendern
+
+Hier gilt dasselbe wie f�uer die Faktb�uecher, nur dass wir es ausschlie�sslich mit einer einzigen Seite zu tun haben.
+
+Es werden also die Testfae�lle: 1,2,4,5,6,7 getestet.

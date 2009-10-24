@@ -1,0 +1,688 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "DTD/xhtml1-transitional.dtd">
+<html><head><title>Instant Web Mail</title>
+<meta http-equiv='Content-Type' content='text/html; charset=ISO-8859-1'/>
+<style type='text/css'>
+<!--
+body, td {
+	font-family: lucida, verdana, helvetica;
+	font-size: 10px;
+}
+body {
+	width: 494px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	background: silver;
+	color: black;
+}
+a {
+	color: navy;
+	text-decoration: none;
+}
+#topPane {
+	margin-top: -20px;
+	margin-left: -20px;
+}
+.headlineBig {
+	font-size: 16px;
+	font-style: italic;
+	font-weight: bold;
+}
+.headline {
+	font-size: 14px;
+	font-weight: bold;
+}
+-->
+</style>
+<script type='text/javascript'>
+<!--
+function writeTo(username, domain) {
+	location = "mailto:"+username+"@"+domain
+}
+// -->
+</script>
+</head>
+
+
+
+<body>
+
+<div id='topPane'>
+<img src='images/instantwebmail.jpeg' height='87' width='514' alt='Instant Web Mail'/>
+</div>
+
+<span class='headlineBig'>Version 0.60</span>
+<br/><br/><br/><br/>
+
+
+
+<span class='headline'>About</span><br/><br/>
+Instant Web Mail is a free, web-based POP mail client. It is encredibly
+easy to install - however, the easy installation comes at a price:
+There are no <i>Sent mail</i> and <i>Trash</i> folders, and there is no
+address book.<br/><br/><br/><br/>
+
+
+
+<span class='headline'>Author/copyright</span><br/><br/>
+&copy; 2001, 2002 <a href='http://understroem.dk/'>Jonas Koch Bentzen</a> and the contributors.<br/>
+Instant Web Mail is released under the terms of
+<a href='license.txt'>the GNU General Public License</a>.
+<br/><br/><br/><br/>
+
+
+
+<a name='contributors'></a><span class='headline'>Contributors</span><br/><br/>
+In alphabetical order:<br/><br/>
+<table>
+	<tr>
+		<td><a href='http://seasoft.tecbox.com/'>Sven-Erik Andersen</a> [<a href='javascript:writeTo("sven-erik.andersen", "pkf107.no")'>m</a>]</td>
+		<td>The Norwegian translation.</td>
+	</tr>
+	<tr>
+		<td><a href='http://nocnevlny.sk/'>Oliver Ardo</a> [<a href='javascript:writeTo("ardo", "kiwwi.sk")'>m</a>]</td>
+		<td>The Slovak translation.</td>
+	</tr>
+	<tr>
+		<td><a href='http://thelastlinkonthe.net/'>Birkir Björnsson</a> [<a href='javascript:writeTo("bippi", "thelastlinkonthe.net")'>m</a>]</td>
+		<td>The Icelandic translation.</td>
+	</tr>
+	<tr>
+		<td><a href='http://chatvillage.be/'>The Chatvillage Crew</a> [<a href='javascript:writeTo("info", "chatvillage.be")'>m</a>]</td>
+		<td>The "Chatvillage" theme.</td>
+	</tr>
+	<tr>
+		<td><a href='http://www.efdmk.com/'>Eddy Dibbink</a> [<a href='javascript:writeTo("eddy", "home.nl")'>m</a>]</td>
+		<td>The Dutch translation.</td>
+	</tr>
+	<tr>
+		<td>Nicklas af Ekenstam [<a href='javascript:writeTo("n", "nille.org")'>m</a>]</td>
+		<td>Patches to the Swedish translation.</td>
+	</tr>
+	<tr>
+		<td><a href='http://www.grandissue.com/'>Marc Eley</a> [<a href='javascript:writeTo("eley", "grandissue.com")'>m</a>]</td>
+		<td>The "Grand Issue" theme.</td>
+	</tr>
+	<tr>
+		<td><a href='http://medyabim.net/'>Emre Erim</a> [<a href='javascript:writeTo("admin", "medyabim.net")'>m</a>]</td>
+		<td>Patches to the Turkish translation.</td>
+	</tr>
+	<tr>
+		<td>Grazziano Picanço Guarany [<a href='javascript:writeTo("guarany", "fit.br")'>m</a>]</td>
+		<td>The Brazilian Portuguese translation.</td>
+	</tr>
+	<tr>
+		<td>Ulf Harnhammar [<a href='javascript:writeTo("metaur", "prontomail.com")'>m</a>]</td>
+		<td>Suggestions for security fixes.</td>
+	</tr>
+	<tr>
+		<td><a href='http://orbis.hr/'>Nenad Hranic</a> [<a href='javascript:writeTo("nenad", "terminator.com")'>m</a>]</td>
+		<td>The Croatian translation.</td>
+	</tr>
+	<tr>
+		<td><a href='http://webjones.net/'>S. Craig Jones</a> [<a href='javascript:writeTo("craig", "webjones.net")'>m</a>]</td>
+		<td>The "Dark City", "Ochre", and "Silver Sage" themes.</td>
+	</tr>
+	<tr>
+		<td><a href='http://tuxfrance.com/'>Eric Joseph-Alexandre</a> [<a href='javascript:writeTo("e.alexandre", "octea.com")'>m</a>]</td>
+		<td>The French translation.</td>
+	</tr>
+	<tr>
+		<td>Kjell Awall [<a href='javascript:writeTo("kjell", "webforum.nu")'>m</a>]</td>
+		<td>The Swedish translation.</td>
+	</tr>
+	<tr>
+		<td><a href='http://www.psu.cas.cz/pracovnici/kveton.html'>Petr Kveton</a> [<a href='javascript:writeTo("kveton", "psu.cas.cz")'>m</a>]</td>
+		<td>The Czech translation.</td>
+	</tr>
+	<tr>
+		<td><a href='http://cysol.dk/'>Morten Leerhøy</a> [<a href='javascript:writeTo("ml", "eisenstein.dk")'>m</a>]</td>
+		<td>The logo image and the "Cysol" theme.</td>
+	</tr>
+	<tr>
+		<td>Pierluigi Montinaro [<a href='javascript:writeTo("ghale", "libero.it")'>m</a>]</td>
+		<td>Patches to the Italian language file.</td>
+	</tr>
+	<tr>
+		<td>Piero Orsoni [<a href='javascript:writeTo("orsoni", "veniceone.it")'>m</a>]</td>
+		<td>The Italian translation and the "Blue" theme.</td>
+	</tr>
+	<tr>
+		<td><a href='http://www.vplabs.com/'>José Antonio Pérez</a> [<a href='javascript:writeTo("jap1968", "yahoo.es")'>m</a>]</td>
+		<td>The Spanish translation.</td>
+	</tr>
+	<tr>
+		<td>Rui Ribeiro [<a href='javascript:writeTo("racr", "fccn.pt")'>m</a>]</td>
+		<td>The Portuguese translation.</td>
+	</tr>
+	<tr>
+		<td><a href='http://frankroth.de/'>Frank Roth</a> [<a href='javascript:writeTo("Frank", "FrankRoth.de")'>m</a>]</td>
+		<td>The German translation.</td>
+	</tr>
+	<tr>
+		<td>Sergey Shibeko [<a href='javascript:writeTo("schs", "apatity.ru")'>m</a>]</td>
+		<td>The Russian translation.</td>
+	</tr>
+	<tr>
+		<td><a href='http://zabki.net.pl/'>Leszek Stefaniak</a> [<a href='javascript:writeTo("leszek.stefaniak", "zabki.net.pl")'>m</a>]</td>
+		<td>The Polish translation.</td>
+	</tr>
+	<tr>
+		<td><a href='http://jurisv.auce.lv/'>Juris Valdovskis</a> [<a href='javascript:writeTo("juris", "auce.lv")'>m</a>]</td>
+		<td>The Latvian translation and the "Yellow" theme.</td>
+	</tr>
+	<tr>
+		<td>Necdet Yücel [<a href='javascript:writeTo("nyucel", "comu.edu.tr")'>m</a>]</td>
+		<td>The Turkish translation.</td>
+	</tr>
+</table><br/>
+
+Besides those listed here, a number of people have contributed with
+suggestions, bug reports, etc. Thanks to all of you.
+<br/><br/><br/><br/>
+
+
+
+<span class='headline'>Features</span>
+<ul>
+	<li>Easy to install. Does not require PHP to be compiled with
+	IMAP support.</li>
+
+	<li>Reads and sends attachments.</li>
+
+	<li>Displays text/HTML attachments in-line (while still giving
+	you the option of saving them to your hard drive).</li>
+
+	<li>All the basic functions: Send, receive, reply, reply to
+	all, forward, delete.</li>
+
+	<li>View all headers or the full source of the email.</li>
+
+	<li>Works even if the user has disabled cookies.</li>
+
+	<li>Converts 7-bit headers like
+	"=?iso-8859-1?b?xiDY?= =?iso-8859-1?b?xQ==?=" into the
+	correct 8-bit version ("&AElig; &Oslash; &Aring;").</li>
+
+	<li>URLs and email addresses are made into links.</li>
+
+	<li>Optional formatting of plain text messages: *Bold* is converted to
+	<b>Bold</b>, /italic/ is converted to <i>italic</i>, and
+	_underlined_ is converted to <u>underlined</u>.</li>
+
+	<li>Localized date field.</li>
+
+	<li>Translated into several languages.</li>
+
+	<li>Can be set up to check for new messages automatically.</li>
+
+	<li>Several themes available.</li>
+
+	<li>Customizable: Using the web-based administration page,
+	you can easily add a footer to be shown on all pages.
+	The front page (the log-in page) can be customized even
+	further. All color and font values are gathered in one
+	single style sheet, making them easy to alter.</li>
+</ul>
+<br/><br/><br/><br/>
+
+
+
+<a name='requirements'></a><span class='headline'>Requirements</span>
+<ul>
+	<li>A web host account or server with
+	<a href='http://php.net/'>PHP</a> 4.0.3 or a later
+	version. You do <b>not</b> need IMAP support in PHP -
+	a standard installation of PHP will work.</li>
+
+	<li>A contemporary browser with extensive support for
+	JavaScript and CSS. Netscape 4.x and earlier versions
+	will not work. Instant Web Mail has been known to work
+	in <a href='http://www.konqueror.org/'>Konqueror</a>,
+	<a href='http://mozilla.org/'>Mozilla</a>,
+	<a href='http://opera.no/'>Opera</a>, Netscape 6, and Internet
+	Explorer.</li>
+</ul>
+<br/><br/><br/><br/>
+
+
+
+<span class='headline'>Install</span>
+<ol>
+	<li>Upload the entire instantwebmail directory to your server.
+	That's it! Instant Web Mail works right out of the box (hence
+	the name), so if you want to try it out right away, point your
+	browser to http://example.com/instantwebmail/index.php and log in.
+	However, if you want to change the language or other
+	configuration options, you should follow the next steps:</li>
+
+	<li>If you've installed the program on a Unix server (e.g. Linux,
+	FreeBSD, or Sun Solaris), you need to chmod (change the permissions of) the file
+	settingssaved.php to 666. This can usually be done from within
+	your FTP client. Right-click on settingssaved.php, select "Chmod",
+	and check the boxes as shown on this picture:<br/>
+	<img src='images/chmod.png' height='238' width='347' alt='Chmod'/>
+	</li>
+
+	<li>Point your browser to
+	http://example.com/instantwebmail/settings.php. Log in with the
+	username "username" and the password "password". Now you can
+	configure Instant Web Mail to suit your needs. <b>Don't forget
+	to change the administrator username and password right
+	away</b>.</li>
+</ol>
+<br/><br/><br/><br/>
+
+
+
+<span class='headline'>Questions and answers</span><br/><br/>
+
+<b>Why does it take more than 10 seconds for each page to load even
+though I have a fast Internet connection?</b><br/>
+The problem is probably caused by the POP server. Some POP servers
+perform so-called reverse DNS lookups on the clients that connect to
+them. These reverse DNS lookups take time - often more than 10 seconds.
+If the POP server is located within your internal network (LAN), you
+can probably eliminate the problem by using the IP address of the
+server instead of the host name when you log in. Another solution is of
+course to ask your system administrator to disable reverse DNS lookups
+in the POP server.<br/><br/>
+
+<b>The program can't connect to the POP server even though I'm entering
+the correct host name, username, and password.</b><br/>
+This might be a firewall issue. Some web hosts that offer their
+services for free shut off all network traffic from/to certain ports.
+There's nothing you can do but install Instant Web Mail on
+another server.<br/><br/>
+
+<b>Why do I get an error message saying that the function wordwrap()/is_uploaded_file()/session_unset()
+is undefined?</b><br/>
+Probably because you didn't read this readme file thoroughly. It is
+very clearly stated in the <a href='#requirements'>Requirements</a>
+section which version of PHP is needed to run Instant Web Mail. You
+need that version (or a newer one), otherwise the whole thing won't
+work. That should go without saying - nevertheless, I get a lot of
+emails asking me the above question. If you don't know which version of
+PHP is installed on your server, ask your web host, or try running this
+script:<br/><br/>
+&lt;?php<br/>
+echo "You are using PHP version ".PHP_VERSION;<br/>
+?&gt;
+<br/><br/>
+
+<b>There's a bug in your program. Could you fix it?</b><br/>
+I might - if I have the time. However, before you send me a bug report,
+please make sure the bug is not listed in the <i>To do</i> section of
+this page. If you're sure you've discovered a new bug, send a detailed
+description of it to me. If your description is something along the lines
+of "The program doesn't display the message text", there's no way I can
+figure out what the problem is. I need to know which version of Instant
+Web Mail and PHP you're using as well as which operating system and web
+server program. Please include screen shots of all relevant windows,
+the full message source, JavaScript error messages, etc.<br/><br/>
+
+<b>Do you plan to implement folders and address books?</b><br/>
+No. As its name suggests, Instant Web Mail was made with the goal of
+offering a web mail program that can be installed within minutes. If
+the program were to save information such as sent mail and addresses on
+the server, it would cause the setup time to be much longer. Instant
+Web Mail was designed to read the mail directly from the POP server,
+and it would require a complete rewrite of the program to implement
+folders and address books. Also, I might add that implementing folders is a
+lot of work - but it's not particularly challenging (the difficult part
+when making mail clients is parsing the messages and displaying them
+properly, not communicating with an SQL database). When I write open
+source software, I tend to like small, but challenging tasks that might
+help me improve my programming skills - and making a complete web mail
+program with folders just doesn't fall under that category. Sure
+enough, if you or your company decide to pay me for making a complete
+web-based mail client, I'd be more than happy to - otherwise, forget
+it : )<br/><br/>
+
+<b>How can I be informed about new releases of Instant Web
+Mail?</b><br/>
+Visit <a href='http://understroem.dk/'>Understr&oslash;m</a> frequently
+- or go to <a href='http://freshmeat.net/'>freshmeat</a>, create a new
+user account if you don't have one already, find
+<a href='http://freshmeat.net/projects/instantwebmail/'>the project page
+for Instant Web Mail</a>, and click on "Subscribe to new releases".
+<br/><br/><br/><br/>
+
+
+
+<span class='headline'>To do</span>
+<ul>
+	<li>Better handling of multipart/related messages.</li>
+
+	<li>Bug: The decoding of 7-bit headers cuts away spaces in rare
+	cases. E.g. the subject line
+	"Tester =?iso-8859-1?b?xiwg2CBvZw==?= =?iso-8859-1?b?xQ==?="
+	will incorrectly be displayed as "Tester &AElig;, &Oslash; og&Aring;". The space
+	between "og" and "&Aring;" has been cut away for some reason.</li>
+
+	<li>Bug: Incorrect parsing of headers that extend to more than one lines. Say
+	the subject looks like this in the message source:<br/><br/>
+	
+	Subject: All your base<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;are belong to us.<br/><br/>
+	
+	Instant Web Mail will display that subject line as just "All
+	your base".<br/><br/>
+	
+	It's important to note that Instant Web Mail does not have any
+	problems parsing those multi-line headers that provide
+	information about the content type, character set, etc. of a
+	certain message part. That is, Instant Web Mail will parse
+	headers like the following correctly:<br/><br/>
+	
+	Content-Type: multipart/mixed;<br/>
+	&nbsp;&nbsp;&nbsp;&nbsp;boundary="----asdf1234"</li>
+</ul>
+<br/><br/><br/><br/>
+
+
+
+<a name='changeLog'></a><span class='headline'>Change log</span>
+<ul>
+	<li>Version 0.60 (March 17, 2002)
+	<ul>
+		<li>The user may now choose his/her preferred language when
+		logging in. The default language is the language specified by
+		the administrator.</li>
+
+		<li>Capitalized headers such as "SUBJECT" and "FROM" are now
+		recognized.</li>
+
+		<li>Instant Web Mail now uses PHP's built-in error
+		handling system.</li>
+
+		<li>For security reasons it is no longer possible to write
+		extra headers besides the normal ones when composing
+		messages.</li>
+
+		<li>I've given up on magic_quotes_gpc : ) This means I will no
+		longer write additional code to remove slashes that were added
+		automatically by the PHP parser. If magic_quotes_gpc is enabled
+		on your server... tough luck!</li>
+
+		<li>New theme: "Chatvillage".</li>
+	</ul>
+	</li>
+	<li>Version 0.59 (March 10, 2002)
+	<ul>
+		<li>Some corrections were made in the Italian language file.</li>
+
+		<li>The German language file was corrected once again.</li>
+	</ul>
+	</li>
+	<li>Version 0.58 (February 3, 2002)
+	<ul>
+		<li>Fixed a couple of wrong default settings in
+		settingsSaved.php.</li>
+
+		<li>Removed the border around images.</li>
+	</ul>
+	</li>
+	<li>Version 0.57 (January 28, 2002)
+	<ul>
+		<li>Fixed a bug that caused the preset server names, usernames,
+		etc. to be displayed as "A" on systems where magic_quotes_gpc
+		is on. The same bug was also the cause of a "foreach" error
+		that occured when you edited settings.php.</li>
+
+		<li>New Croatian translation.</li>
+
+		<li>More corrections in the German language file.</li>
+	</ul>
+	</li>
+	<li>Version 0.56 (January 22, 2002)
+	<ul>
+		<li>The annoying problems with magic_quotes_gpc were fixed. In
+		earlier versions of Instant Web Mail, I tried to turn
+		magic quotes off by including a .htaccess file that contained
+		the following command: "php_flag magic_quotes_gpc off". However,
+		that only worked in some instances. In a lot of cases, the
+		command either didn't work at all, or it caused an "Internal
+		Server Error" message. I decided to remove the .htaccess file
+		and write some code at the top of functions.php that handles
+		the magic quotes issues.</li>
+
+		<li>New theme: "Grand Issue".</li>
+
+		<li>A minor error in the German language file was
+		corrected.</li>
+	</ul>
+	</li>
+	<li>Version 0.55 (November 13, 2001)
+	<ul>
+		<li>The German translation was updated.</li>
+
+		<li>The Spanish translation was updated.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.54 (October 26, 2001)
+	<ul>
+		<li>New Icelandic translation.</li>
+
+		<li>The Italian translation was updated.</li>
+
+		<li>The Turkish translation was updated.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.53 (October 9, 2001)
+	<ul>
+		<li>A new Slovak translation that replaces the old
+		one.</li>
+
+		<li>New Czech translation.</li>
+
+		<li>Most other translations were updated.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.52 (September 30, 2001)
+	<ul>
+		<li>Removed the crypt() function from settings.php
+		because it caused problems with people not being able
+		to log in.</li>
+
+		<li>Added the .lowCheckBox class to the style sheets in
+		order to insure that the check boxes in the header list
+		don't take up so much space that they enlarge the
+		subject table rows.</li>
+
+		<li>New Slovak translation.</li>
+
+		<li>Updated the Norwegian translation.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.51 (September 23, 2001)
+	<ul>
+		<li>Some people were unable to log in using the default
+		username and password. I think I solved the problem. If
+		some if you still can't log in, contact me, and I'll
+		take another look at the problem.</li>
+
+		<li>In order to make it clearer to the user which links
+		are attachments, a tiny image is now displayed next to
+		all attachment links.</li>
+
+		<li>Added a logo image.</li>
+
+		<li>New German translation.</li>
+
+		<li>The "Cysol" theme: New font color in text
+		areas.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.50 (September 15, 2001)
+	<ul>
+		<li>URLs are made into links now.</li>
+
+		<li>You can now delete multiple messages directly in
+		the header list.</li>
+
+		<li>Fixed a line break bug in write.php which on some
+		Unix systems caused the Content-Type header to appear
+		in the body of the message.</li>
+
+		<li>New themes: "Dark City", "Ochre", and "Silver
+		Sage".</li>
+
+		<li>Spanish translation.</li>
+
+		<li>Improved README.html.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.41 (September 6, 2001)
+	<ul>
+		<li>New theme: "Cysol".</li>
+
+		<li>New theme: "Yellow".</li>
+
+		<li>French translation.</li>
+
+		<li>Updated the Latvian translation.</li>
+
+		<li>Updated the Turkish translation.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.40 (August 29, 2001)
+	<ul>
+		<li>It is now possible to have more than one preset POP
+		server, port, and username. In settings.php, you can
+		enter a list of POP servers, ports, and usernames to
+		use, and then Instant Web Mail will display those lists
+		in select boxes on the log-in page.</li>
+
+		<li>Added another field to the log-in screen: "Your
+		email address". The reason is that a lot of
+		people have complained that Instant Web Mail doesn't
+		show the correct "From" address in the compose window.
+		Unfortunally, it's almost impossible for the program to
+		guess the user's email address since there are tons of
+		different ways of writing POP usernames - so what
+		better way to solve the problem than let the user
+		specify his/her email address?...</li>
+
+		<li>settings.php now has help texts for some of the configuration options.</li>
+
+		<li>The bug that caused certain message bodies to
+		disappear should be completely fixed now.</li>
+
+		<li>Updated the Norwegian and the Turkish translation.</li>
+
+		<li>Swedish translation.</li>
+
+		<li>Polish translation.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.30 (August 24, 2001)
+	<ul>
+		<li>The bug that caused some message bodies to
+		mysteriously disappear has been fixed.</li>
+
+		<li>The ability to set the priority of outgoing mail
+		has been added.</li>
+
+		<li>New theme: "Blue".</li>
+
+		<li>Brazilian Portuguese translation.</li>
+
+		<li>Italian translation.</li>
+
+		<li>Norwegian translation.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.22 (August 19, 2001)
+	<ul>
+		<li>Added the possibility to request return receipts.</li>
+
+		<li>Better attempts to guess the user's email address
+		in the compose window.</li>
+
+		<li>Dutch translation.</li>
+
+		<li>German translation.</li>
+		
+		<li>Portuguese translation.</li>
+
+		<li>Turkish translation.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.21 (August 17, 2001)
+	<ul>
+		<li>In version 0.20, the default language had been set
+		to Danish by accident. Version 0.21 changes the default
+		language to English.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.20 (August 16, 2001)
+	<ul>
+		<li>Added theme support.</li>
+
+		<li>Optional formatting of plain text messages: *Bold*
+		is converted to <b>Bold</b>, /italic/ is converted
+		to <i>italic</i>, and _underlined_ is converted to
+		<u>underlined</u>.</li>
+		
+		<li>Internet Explorer and Opera users might have had
+		problems replying and forwarding due to JavaScript
+		issues. These issues have been resolved.</li>
+
+		<li>Fixed a bug which in some cases would cause the
+		sender address in the compose window to be something
+		like "someone@example.com@example.com".</li>
+
+		<li>Russian translation.</li>
+
+		<li>Latvian translation.</li>
+
+		<li>Improved about.php.</li>
+
+		<li>Improved README.html.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.12 (August 12, 2001)
+	<ul>
+		<li>Fixed a JavaScript error that would occur whenever the
+		user clicked on "New letter".</li>
+
+		<li>Improved README.html.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.11 (August 12, 2001)
+	<ul>
+		<li>Added automatic checking of new
+		mail.</li>
+
+		<li>Fixed a minor bug that caused the recipient and
+		sender address to be the same in the "Forwarded letter"
+		portion of the compose window.</li>
+
+		<li>Improved README.html.</li>
+
+		<li>Improved about.php.</li>
+	</ul>
+	</li>
+
+	<li>Version 0.10 (August 5, 2001)
+	<ul>
+		<li>First version.</li>
+	</ul>
+	</li>
+</ul>
+
+</body></html>

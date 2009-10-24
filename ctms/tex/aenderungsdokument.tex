@@ -1,0 +1,79 @@
+\documentclass[12pt, a4paper, titlepage, headsepline]{scrartcl} %KOMA
+
+\usepackage{graphicx} %Grafik
+\usepackage{color} %Farbe
+\usepackage[ngerman]{babel} %Deutsche Rechtschreibung
+\usepackage[latin1]{inputenc} %Umlaute
+\usepackage[bookmarksopen=true, pdfborder=false]{hyperref} %Lesezeichen
+
+\pagestyle{headings} %Stil der Kopf- und Fußzeilen festlegen
+
+\setlength{\parindent}{0pt} %Erstzeileneinzug entfernen
+\setlength{\parskip}{10pt} %Absätze durch Leerzeile trennen
+
+\definecolor{uniblau}{cmyk}{1,0.83,0.35,0.24} %Farbe vom Unilogo
+\addtokomafont{section}{\color{uniblau}} %Überschriften ändern
+
+%------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+\sffamily
+
+\begin{titlepage} %Titelseite
+	\noindent
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{uni-logo.png}\\
+		\vspace{3cm}
+		\LARGE Änderungsdokument\\
+		\vspace{1cm}
+		\huge \textbf{\textcolor{uniblau}{Software - Praktikum}}\\
+		\vspace{1cm}
+		\LARGE \textit{Sommersemester 2005}\\
+		\LARGE \textit{Dr. Michael Tauber}\\
+		\vspace{2cm}
+		\LARGE \textit{Gruppe 1}\\
+		\LARGE \textit{Betreuer Matthias Schnelte}\\
+		\vspace{2cm}
+		\large \today %aktuelles Datum
+		\vfill
+		\normalsize
+	\end{center}
+
+%------------------------------------------------------------------------------------------------------------------
+	
+\end{titlepage}
+
+\rmfamily
+
+\pagenumbering{Roman} %römische Nummerierung
+\tableofcontents %Inhaltsverzeichnis
+\listoffigures %Abbildungsverzeichnis
+\listoftables %Tabellenverzeichnis
+%\newpage
+\pagenumbering{arabic} %arabische Nummerierung
+\linespread{1.3} %Eineinhalb-facher Zeilenabstand
+\normalsize
+
+\section{Änderungen im Datenmodell}
+Das Datenmodell wurde an einzelnen Stellen ergänzt und teilweise verändert. Neben einzelnen Objekt-Eigenschaften betrifft dies vor allem die nach dem Einreichen des Pflichtenhefts aufgekommene Anforderung, Textmodule als Grundlage verschiedener Objekte zu verwenden. Entsprechend wurde das Modell angepasst: Es existieren nun TextModule (Text und Audiodatei) und Listen von Textmodulen. Letztere finden Verwendung als Seiten oder Faktkarten. Durch diese Abstraktion ist ein einheitlicher Zugang zum Editieren von Texten ermöglicht worden.
+
+\section{Persistenzstrategie}
+Zusätzlich zur geforderten Persistenz ist auch noch eine Implementierung einer speicherbasiertend Datenhaltung hinzugekommen. Diese ist vor allem möglich um für Unit-Tests entsprechende Objekte zur Verfügung zu stellen.
+
+\section{Nicht umgesetzte Anforderungen}
+Die Perspektivische Mauer kann nicht sinnvoll konfiguriert werden. Dazu müsste der entsprechende Dialog stark überarbeitet und eine Strategie festgelegt werden, wo die Konfiguration gespeichert wird. Speichert man die Konfiguration der Datenbank ist sie nur benutzerabhängig, kann jedoch nicht für unterschiedliche Rechner erfolgen. Speichert man sie auf dem Rechner, so kann für jeden Rechner eine individuelle Konfiguration erfolgen; die Einstellungen stehen jedoch an einem anderen Rechner nicht zur Verfügung. Sinnvoll wäre eine hybride Strategie.
+
+Die Wizards wurden nicht erhalten. Die Eingabe erfolgt fensterorientiert. Dies erscheint sinnvoll, da die Anwender des Systems sog. Power-User sind, während Wizards im Allgemeinen für Anwendungen empfohlen werden, die nur selten benutzt werden.
+
+Für die Festlegung der Ausfall-, Ausschluss- und Therapietage ist kein eigenes Widget implementiert worden. Der Benutzer kann nur Listen mit den entsprechenden Tagen verarbeiten. Auch der Periodenbeginn, Evaluationsbeginn und -ende können nur jeweils einzeln in einem Kalender selektiet werden. Es erfolgt keine Überprüfung auf Sinnhaftigkeit der Daten (z.B. Ende vor Beginn). Der Honeymoon ergibt sich automatisch durch das Ende einer Evaluation und den Starttag der folgenden Periode.
+
+Die einfache Installation der Vorgängegruppe wurde nicht erreicht, da kein Tool zur Verfügung stand mit dem ein entsprechender Installer erzeugt werden kann.
+
+Es wurden zwar alle Elemente in der GUI umgesetzt, jedoch ist diese Umsetzung teilweise rudimentär, so dass empfohlen wird diese mit GUI-Experten zu überarbeiten. Dabei können Struktur und Klassen übernommen werden. Es ist jedoch ein Beautifing notwendig.
+
+\section{Nicht vollständig umgesetzte Anforderungen}
+Die Equals-Methoden wurden nur in einigen Klassen ad hoc überschrieben.
+
+Das Auslagern der Beschriftung ist großteils erfolgt. Jedoch sind auch hier noch einige Klassen vorhanden, bei den Strings direkt im Quelltext kodiert sind.
+
+\end{document}

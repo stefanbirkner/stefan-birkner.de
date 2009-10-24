@@ -1,0 +1,20 @@
+----------------------------------------------------------------------
+
+Testfälle:
+
+1.	Admin-Funktionen
+
+2.	Klientenverwaltung
+	Klienten anlegen - löschen - bearbeiten
+
+3.	Periode erstellen - bearbeiten - löschen  
+
+4.	Präsentation erstellen (**nicht implementiert**)
+
+5.	Klienten anderen Therapeuten zuweisen (**nicht implementiert**)
+
+6.	Farbkonfigurationen (Präsentation, pWall...) (**nicht implementiert**)
+
+7.	Datenbank
+
+-----------------------------------------------------------------------

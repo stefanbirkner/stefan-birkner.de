@@ -1,0 +1,12 @@
+\begin{list}{}
+	\item THERAPIST (\#therapistId, \#name, password)
+	\item CLIENT (\#clientId, \#name, password, type, progress, \underline{therapistId})
+	\item PERIODE (\#periodeId, \underline{clientId}, factPerDay, factRepeat, factSlideDelay, factForeGroundColor, factBackGroundColor, factFontType, factFontSize, bitPerDay, bitRepeat, bitSlideDelay, bitForeGroundColor, bitBackGroundColor, bitFontType, bitFontSize, sentencePerDay, sentenceRepeat, sentenceSlideDelay, sentenceForeGroundColor, sentenceBackGroundColor, sentenceFontType, sentenceFontSize, wordPerDay, wordRepeat, wordSlideDelay, wordForeGroundColor, wordBackGroundColor, wordFontType, wordFontSize,  bookEnabled, bookSlideDelay, bookForeGroundColor, bookBackGroundColor, bookFontType, bookFontSize, minDelay, voice)
+	\item THERAPYDAY (\#therapyDayId, date, \underline{periodeId})
+	\item PRESENTATION (\#presentationId, title, type, showed, lastShowedTime, delay, \underline{therapyDayId})
+	\item SITE (\#siteId, siteNumber, text, audio, graphic, \underline{presentationId})
+	\item BOARD (\#boardId, name, \underline{caseId})
+	\item BOOK (\#id, \underline{boardId}, \underline{presentationId})
+	\item BCASE (\#caseId, name, \underline{archivId})
+	\item ARCHIV (\#archivId, \underline{therapistId}, \underline{clientId})
+\end{list}

@@ -1,0 +1,23 @@
+Sopra Protokoll 13.09.05
+
+Start: 9:30
+
+Ende: 14:00
+
+Teilnehmer:
+
+Hermbecker	Jan-Michel
+Nientit		Manuel
+Redchenko	Illya
+Birkner		Stefan
+Tchiyanou	Edith
+// Le		Dinh Khoi Nguyen (Entschuldigt)
+Richert		Manuel
+Richert		Natalie
+Nepp		Larissa
+
+
+=> Treffen mit Gruppenbetreuer:
+
+	-> Überarbeiten der Schwachstellenanalyse (Ergänzen / Formulierung der Schwachstellen)
+	-> Abschicken der Schwachstellenanalyse

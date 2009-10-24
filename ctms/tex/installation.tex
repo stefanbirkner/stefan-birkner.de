@@ -1,0 +1,190 @@
+\documentclass[12pt, a4paper, titlepage, headsepline]{scrartcl} %KOMA
+
+\usepackage{graphicx} %Grafik
+\usepackage{color} %Farbe
+\usepackage[ngerman]{babel} %Deutsche Rechtschreibung
+\usepackage[latin1]{inputenc} %Umlaute
+\usepackage[bookmarksopen=true, pdfborder=false]{hyperref} %Lesezeichen
+
+\pagestyle{headings} %Stil der Kopf- und Fußzeilen festlegen
+
+\setlength{\parindent}{0pt} %Erstzeileneinzug entfernen
+\setlength{\parskip}{10pt} %Absätze durch Leerzeile trennen
+
+\definecolor{uniblau}{cmyk}{1,0.83,0.35,0.24} %Farbe vom Unilogo
+\addtokomafont{section}{\color{uniblau}} %Überschriften ändern
+
+%------------------------------------------------------------------------------------------------------------------
+
+\begin{document}
+\sffamily
+
+\begin{titlepage} %Titelseite
+	\noindent
+	\begin{center}
+		\includegraphics[width=0.75\textwidth]{uni-logo.png}\\
+		\vspace{3cm}
+		\LARGE Installationsanleitung\\
+		\vspace{1cm}
+		\huge \textbf{\textcolor{uniblau}{Software - Praktikum}}\\
+		\vspace{1cm}
+		\LARGE \textit{Sommersemester 2005}\\
+		\LARGE \textit{Dr. Michael Tauber}\\
+		\vspace{2cm}
+		\LARGE \textit{Gruppe 1}\\
+		\LARGE \textit{Betreuer Matthias Schnelte}\\
+		\vspace{2cm}
+		\large \today %aktuelles Datum
+		\vfill
+		\normalsize
+	\end{center}
+
+%------------------------------------------------------------------------------------------------------------------
+	
+\end{titlepage}
+
+\rmfamily
+
+\pagenumbering{Roman} %römische Nummerierung
+\tableofcontents %Inhaltsverzeichnis
+%\newpage
+\pagenumbering{arabic} %arabische Nummerierung
+\linespread{1.3} %Eineinhalb-facher Zeilenabstand
+\normalsize
+
+%------------------------------------------------------------------------------------------------------------------
+%------------------------------------------------------------------------------------------------------------------
+% hier beginnt die Installationsanleitung
+
+\section{Systemvorraussetzungen:}
+
+Das CTMS läuft auf jedem Rechner, auf dem Java 1.4.2 und MySQL 4.1 läuft. Diese Software müssen Sie auch vorher installieren (Hinweis: Eine Anleitung zur Installation von MySQL findet sich im Anhang). Für die Sprachausgabe benötigen Sie noch eine Soundkarte. Das Installationsarchiv umfasst 50 MB; jedoch wird der Speicherbedarf vor allem durch die Daten bestimmt, die Sie im CTMS hinterlegen.
+
+\section{Installation}
+Die Installation benötigt nur wenige Schritte nachdem die oben genannten Grundlage geschaffen wurden. Die einzelnen Schritte werden im Folgenden beschrieben.
+
+\subsection{Entpacken des Archivs}
+Das Programm wird in Form eine Zip-Archivs ausgeliefert. Entpacken Sie dieses in ein beliebiges Verzeichnis.
+
+\subsection{OpenGL-Vorbereitung}
+CTMS verwendet gl4java als Schnittstelle zur Grafikausgabe. Um mit ihrem Betriebssystem interagieren zu können, müssen deshalb einige Dateien in ihre Java-Installation kopiert werden. Unter Windows wird von uns die Datei libGL4Java2.8.0.8-Win32-x86 mitgeliefert. Die darin enthaltenen Dateien müssen sie in das bin-Unterverzeichnis ihres Java Runtime Enviroments entpacken. Dieses liegt unter einem Pfad, der ähnlich zu folgendem ist: c:/Programme/Java/jdk1.5.0_05/jre/bin 
+
+\subsection{Erstellen der Datenbank}
+CTMS arbeitet mit eine MySQL-Datenbank. Diese muss vorher von einem Datenbankadministrator installiert werden. Dazu wird das SQL-Skript Create.sql mitgeliefert. Der Administrator kann damit die Tabellen einer entsprechenden Datenbank anlegen. Anschließend muss er Ihnen noch die Datei config/jdbc.properties im Installationsverzeichnis anpassen. Dort müssen folgende Angaben gemacht werden.
+
+\begin{enumerate}
+\item jdbc.DriverName: Der Name des Treibers (hier bleibt in der Regel die Voreinstellung erhalten)
+\item jdbc.ConnectionURL: Der Ort der Datenbank. Hier ist insbesondere ctms durch den Namen ihrer Datenbank zu ersetzen.
+\item jdbc.ConnectionUserName: Der Login des verwendeten Datenbankbenutzers.
+\item jdbc.ConnectionPassword: Das Passwort zum Datenbankzugriff.
+\end{enumerate}
+
+
+\subsection{Starten der Applikation}
+CTMS wird durch einen Doppelklick auf die Datei ctms.bat gestartet. In der jetzigen Version wird für den Administrator kein Passwort überprüft, da noch keine Passwortstrategie festgelegt wurde. Sie können sich also immer als Administrator einloggen und dann andere Benutzer anlegen.
+
+\appendix
+\section{Installation des MySQL-Servers}
+
+	Wählen Sie die Installationsart {\glqq}Typical{\grqq} und betätigen sie anschließend die Schaltfläche {\glqq}Next $>${\grqq}.
+	\begin{center}
+		\includegraphics[width=0.85\textwidth]{MySQL-Installation_02_-_Setup_Type.png}
+			\begin{figure}[h]
+			 \centering       
+			  \label{Installation:MySQL_Installation_02_Setup_Type}
+			\end{figure}
+	\end{center}
+	
+	Anschließend zeigt der Installations-Dialog die getroffene Einstellung und das Zielverzeichnis an. Bestätigen Sie auch diesen Dialog wieder, indem Sie die Schaltfläche {\glqq}Install{\grqq} betätigen.
+		\begin{center}
+		\includegraphics[width=0.85\textwidth]{MySQL-Installation_03_-_Ready_to_Install_the_Program.png}
+			\begin{figure}[h]
+			 \centering       
+			  \label{Installation:MySQL_Installation_03_Ready_to_Install_the_Program}
+			\end{figure}
+	\end{center}
+	
+	Der Fortschritt der Installation wird nun durch einen Fortschrittsbalken angezeigt.
+
+		\begin{center}
+		\includegraphics[width=0.85\textwidth]{MySQL-Installation_04_-_Installing_MySQL_Server_4_1.png}
+			\begin{figure}[h]
+			 \centering       
+-			  \label{Installation:MySQL_Installation_04_Installing_MySQL_Server_4_1}
+			\end{figure}
+	\end{center}
+
+		Warten Sie bis das folgende Fenster erscheint. Hier haben Sie die Möglichkeit sich einen Account bei MySQL.com anzulegen. Sie können jedoch problemlos mit der Installation fortfahren, wenn Sie den Punkt {\glqq}Skip Sign-Up{\grqq} wählen. Bestätigen Sie wieder durch Betätigen der {\glqq}Next $>${\grqq}-Schalfläche.
+		\begin{center}
+			\includegraphics[width=0.85\textwidth]{MySQL-Installation_05_-_MySQL_com_Sign-Up.png}
+			\begin{figure}[h]
+			 \centering
+			  \label{Installation:MySQL_Installation_05_MySQL_com_Sign_Up}
+			\end{figure}
+		\end{center}
+
+		Damit ist die Installation von MySQL abgeschlossen. Wählen Sie jedoch im folgenden Dialogfenster die Option {\glqq}Configure the MySQL Server now{\grqq} und bestätigen Sie dies durch die Schaltfläche {\glqq}Install{\grqq}. Damit gelangen Sie sofort zu Konfiguration von MySQL.
+		\begin{center}
+		\includegraphics[width=0.85\textwidth]{MySQL-Installation_06_-_Wizard_Completed.png}
+			\begin{figure}[h]
+			 \centering       
+			  \label{Installation:MySQL_Installation_06_Wizard_Completed}
+			\end{figure}
+	\end{center}
+
+		Den Begrüßungsbildschirm können Sie durch Betätigen der {\glqq}Next $>${\grqq}-Schalfläche verlassen.
+		\begin{center}
+		\includegraphics[width=0.85\textwidth]{MySQL-Installation_07_-_Welcome_to_the_MySQL_Server_Instance_Configuration_Wizard_1_0_5.png}
+			\begin{figure}[h]
+			 \centering       
+			  \label{Installation:MySQL_Installation_07_Welcome_to_the_MySQL_Server_Instance_Configuration_Wizard_1_0_5}
+			\end{figure}
+	\end{center}
+
+		Im folgenden Schritt wählen Sie die Einstellung {\glqq}Standard Configuration{\grqq} und setzen die Konfiguration durch Betätigen der {\glqq}Next $>${\grqq}-Schaltfläche fort.
+		\begin{center}
+		\includegraphics[width=0.85\textwidth]{MySQL-Installation_08_-_MySQL_Server_Instance_Configuration.png}
+			\begin{figure}[h]
+			 \centering
+			  \label{Installation:MySQL_Installation_08_MySQL_Server_Instance_Configuration}
+			\end{figure}
+	\end{center}
+
+		Wählen Sie nun die beiden Optionen {\glqq}Install as Windows Service{\grqq} und {\glqq}Include bin directory in Windows PATH{\grqq}. Wenn Sie noch einen Haken bei {\glqq}Launch the MySQL server automatically{\grqq} setzen, wie im Beispiel unten, dann startet MySQL künftig automatisch beim Hochfahren des Rechners. Die Konfiguration setzen Sie durch Betätigen der {\glqq}Next $>${\grqq}-Schaltfläche fort.
+		\begin{center}
+		\includegraphics[width=0.85\textwidth]{MySQL-Installation_09_-_MySQL_Server_Instance_Configuration.png}
+			\begin{figure}[h]
+			 \centering       
+			  \label{Installation:MySQL_Installation_09_MySQL_Server_Instance_Configuration}
+			\end{figure}
+	\end{center}
+
+	Im folgenden Schritt wird die Zugangsberechtigung festgelegt. Wählen Sie die Option {\glqq}Modifay Security Settings{\grqq} und geben Sie ein Passwort ein. Achtung: Ohne dieses Passwort erhalten Sie keinen Zugriff mehr auf ihr installiertes MySQL. Die Option {\glqq}Enable root access from remote machines{\grqq} sollten sie, wie unten, nicht markieren. Damit würden Sie ihren Rechner einem zusätzlichen Sicherheitsrisiko aussetzen, da jemand sich von außen mit der Datenbank verbinden kann. Durch Betätigen der {\glqq}Next $>${\grqq}-Schaltfläche setzen Sie die Konfiguration fort.
+ 		\begin{center}
+		\includegraphics[width=0.85\textwidth]{MySQL-Installation_10_-_MySQL_Server_Instance_Configuration.png}
+			\begin{figure}[h]
+			 \centering       
+			  \label{Installation:MySQL_Installation_10_MySQL_Server_Instance_Configuration}
+			\end{figure}
+	\end{center}
+	
+	Im folgenden Dialog werden nun die einzelnen Schritte aufgezeigt, die das Konfigurationswerkzeug ausführen wird. Betätigen Sie die {\glqq}Execute{\grqq}-Schaltfläche um deren Ausführung zu starten.
+
+		\begin{center}
+		\includegraphics[width=0.85\textwidth]{MySQL-Installation_11_-_MySQL_Server_Instance_Configuration.png}
+			\begin{figure}[h]
+			 \centering       
+			  \label{Installation:MySQL_Installation_11_MySQL_Server_Instance_Configuration}
+			\end{figure}
+	\end{center}
+
+	Nachdem alle Schritte durchgeführt sind, erhalten sie den folgenden Bildschirm. Durch Betätigen der {\glqq}Finish{\grqq}-Schaltfläche schließen Sie anschließend das Konfigurationswerkzeug.
+		\begin{center}
+		\includegraphics[width=0.85\textwidth]{MySQL-Installation_12_-_MySQL_Server_Instance_Configuration.png}
+			\begin{figure}[h]
+			 \centering       
+			  \label{Installation:MySQL-Installation_12_MySQL_Server_Instance_Configuration}
+			\end{figure}
+	\end{center}
+
+\end{document}

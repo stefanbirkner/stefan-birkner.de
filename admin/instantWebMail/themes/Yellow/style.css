@@ -1,0 +1,76 @@
+/* Created using Style Master from Western Civilisation CSS1 { 2 2 512 630 } */
+
+body, th, td, input, select, textarea
+{font-family: lucida, verdana, helvetica;
+font-size: 10px}
+
+body {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	background-color: white;
+	color: black
+}
+
+a:link
+{color: navy;
+text-decoration: none}
+
+a:active
+{color: navy;
+text-decoration: none}
+
+a:visited
+{color: navy;
+text-decoration: none}
+
+a:hover
+{color: navy;
+text-decoration: underline}
+
+table
+{background-color: black;
+width: 100%}
+
+.tableAutoWidth
+{width: auto}
+
+th, td
+{padding: 3px;
+vertical-align: top}
+
+th
+{background-color: #e8bb09;
+color: #ffffff;
+text-align: left}
+
+td
+{background-color: #f5da3d;
+color: #000000}
+
+input, textarea
+{width: 200px}
+
+textarea
+{height: 60px}
+
+.button, .lowCheckBox {
+	width: auto;
+}
+.lowCheckBox {
+	height: 11px;
+}
+
+#importantHeaders
+{display: block}
+
+#allHeaders
+{display: none}
+
+#textareaWrite
+{height: 200px;
+width: 100%}
+
+#inputFrameSize
+{width: 20px}

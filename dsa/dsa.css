@@ -1,0 +1,38 @@
+/* DATEI: dsa.css */
+
+body { margin-top:10px;
+       margin-bottom:10px;
+       background-image:url(pictures/holz27.jpg); }
+
+p,h1,h2,h3,h4,h5,h6,formul,ol,li,div,table,address,blockquote,nobr,b,i
+{ font-family:Arial,sans-serif;
+  text-align:justify; }
+p,form { padding:5px; }
+
+h2 { color:#FFD000;
+     font-size:24pt;
+     text-align:center; }
+
+h3 { color:#FFD000;
+     font-size:16pt;
+     text-align:center; }
+
+h4 { color:#FFD000;
+     font-size:14pt;
+     text-align:center; }
+
+h5 { font-size:14pt;
+
+     text-align:left; }
+
+p,ul,ol,li,div,td,th,address,nobr,b,i { font-size:10pt; }
+
+td,th
+{ border-width:1pt;
+  text-align:justify; }
+
+a:link    { color:#0000FF; text-decoration:underline; }
+a:visited { color:#0000FF; text-decoration:underline; }
+a:active  { color:#0000FF; text-decoration:none; }
+
+.note { background-image:url(pictures/paper06.jpg); }

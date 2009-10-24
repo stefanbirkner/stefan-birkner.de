@@ -1,0 +1,88 @@
+body, th, td, input, select, textarea {
+	font-family: Tahoma, helvetica, sans-serif;
+	font-size: 9px;
+}
+body {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+	margin-right: 20px;
+	background: #FFF;
+	color: #333;
+}
+a:link {
+	text-decoration: underline;
+	color: #AA3405;
+}
+a:active {
+	text-decoration: none;
+	color: #AA3405;
+}
+a:visited {
+	text-decoration: underline;
+	color: #AA3405;
+}
+a:hover {
+	text-decoration: underline;
+	color: #333;
+}
+table {
+	width:100%;
+	background:#FFF;
+	border-style:solid;
+	border-color:#333;
+	border-width:1px 1px 0px 0px;
+}
+
+.tableAutoWidth {
+	width: auto;
+}
+
+td {
+	vertical-align: middle;
+	border-style:solid;
+	border-color:#333;
+	border-width:0px 0px 1px 1px;
+	color: #333;
+	padding:5px 3px 5px 8px;
+}
+th {
+	padding:3px 3px 3px 8px;
+	text-align:left;
+	background:#EEE;
+	color:#333;
+	border-style:solid;
+	border-color:#333;
+	border-width:0px 0px 1px 1px;
+
+}
+input, textarea {
+	width: 200px;
+	border:1px solid #333;
+}
+textarea {
+	font-family:monospace;
+	font-size:11px;
+	height:60px;
+	border:1px solid #333;
+}
+
+.button, .lowCheckBox {
+	width: auto;
+}
+.lowCheckBox {
+	height: 11px;
+}
+#importantHeaders {
+	display: block;
+}
+#allHeaders {
+	display: none;
+}
+#textareaWrite {
+	width: 100%;
+	height: 200px;
+}
+#inputFrameSize {
+	width: 20px;
+}

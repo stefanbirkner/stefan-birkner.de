@@ -1,0 +1,33 @@
+/* DATEI: stylesheet.css */
+
+body { margin-top:10px;
+       margin-bottom:10px;
+       background-image:url(../pictures/bkgMyranor.jpg); }
+
+p,h1,h2,h3,h4,ul,ol,li,div,table,address,blockquote,nobr,b,i
+{ font-family:Arial,sans-serif;
+  text-align:justify; }
+
+.marked { background-color=#20A0A0;}
+
+h2 { font-size:24pt;
+     text-align:center; }
+
+h3 { font-size:16pt;
+     text-align:center; }
+
+h4 { font-size:14pt;
+     text-align:center; }
+
+h5 { font-size:14pt;
+     text-align:left; }
+
+p,ul,ol,li,div,td,th,address,nobr,b,i { font-size:10pt; }
+
+td,th
+{ border-width:1pt;
+  text-align:justify; }
+
+a:link { color:#0000FF; text-decoration:underline; }
+a:visited { color:#0000FF; text-decoration:underline; }
+a:active { color:#0000FF; text-decoration:none; }

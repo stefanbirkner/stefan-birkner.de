@@ -1,0 +1,69 @@
+SOPRA Besprechung: 07.09.2005
+
+-KOnsistenz
+-Grafische Erweiterung
+
+-Aufgabenstellung für Abschlusspräsentation (nicht die Korrigierte)
+
+		-> Aufgaben auf Korrektheit prüfen
+		-> Lauffähigkeit
+
+		(Besprechung Anfang der nächsten Woche)
+
+
+
+Ziel:
+
+-> Gewährleistung einer Korrekten Kernaufgabenstellung
+
+		Reengenierung
+
+		-> Schwachstellenanalye - Korrektheit der Kernaufgabe
+
+-> Realisieren der Drei Phasen -> Kalenderplanung
+
+	-> Strong ( fester Ablauf)
+	-> Relax ( Mangel Gruppe 6 - Ausschlusstage, immer wiederkehrende Wochentage, freie Ausschlusstage, keine ordentliche Kalenderunterstützung gegeben, zusätzliches Eintragen, freies definieren von Ausschlusstagen, Euler Formel (für Bewegliche Feiertage)
+	-> Light ( freies bestimmen der Tage)
+
+-> Reenginieren der Oberfläche ( Anzeigen der Kalendertage)
+
+	Farbgestalltung
+	Text
+	Ergonomie
+
+Verwaltung mehrerer Prioden (Überarbeiten, neu gestalten)
+
+	-> in eine Abgelaufende Periode einsehen
+	-> mind. eine Periode im vorraus Planbar machen
+	-> laufende Periode pfüfen, ändern
+
+Evaluationszeiten pro Periode mit einplanen
+
+	-> Einfürungsevaluierung der Perioden
+
+	Periode 1 (Wörter, Sätze)
+	Periode n (Bits, Content)
+
+	-> jede Kategorie hat festen Start- & Endtag
+	-> Anzahl regelt Verweildauer
+
+Masken überarbeiten
+
+	Konsistenz
+	Selbsterklärung
+	Bedienerfreundlichkeit
+	
+Visualisierung der Mauer überarbeiten
+
+Mit dem Tag beginnen, für den noch nicht alle Materialien bereitstehen ( Editiermodus)
+
+Modus 1: Präsentationsmodus
+Modus 2: Editiermodus
+Modus 3: Ansehen von Alten Materialien (Archivform ???)
+
+Nicht Text zo Speech anfassen
+
+
+
+

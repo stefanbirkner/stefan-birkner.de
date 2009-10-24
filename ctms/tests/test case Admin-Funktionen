@@ -1,0 +1,62 @@
+
+Testprotokoll
+Projekt: CTMS (Computergestütztes Therapie Management System)
+Autor: Sopra SS2005, Gruppe 1
+Letzte Änderung: 25.10.2005
+
+Übersicht
+Testobjekt: Administrator-Funktionen
+Testdatum: 25.10.2005
+
+
+Vorbedingungen: Das Programm wurde gestartet
+
+
+---------------------------------------------------------------------
+Testfall 1: Administrator authentifizieren
+
+Vorgangsbeschreibung: Der Benutzer wählt aus der Liste der Benutzernamen den Administrator und gibt dessen Passwort ein und klickt auf den 		Anmelden-Button.
+
+Mögliche Fehlermeldung: Passwort stimmt nicht.
+
+Erwartetes Ereignis: Das Programm öffnet ein Fenster mit der Liste aller im Programm gespeicherten Therapeuten und der Option, einen neuen 		Therapeuten anzulegen.
+
+Sofort erfüllt: JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+Testfall 2: Therapeuten anlegen
+
+Vorgangsbeschreibung: Der Benutzer gibt einen Namen und ein Passwort für den neuen Therapeuten ein, bestätigt dieses und klickt auf den 		"Therapeuten anlegen"-Button.
+
+Mögliche Fehlermeldungen:
+	Die Bestätigung des Passworts stimmt nicht.
+	Der eingegebene Name existiert bereits in der Datenbank.
+
+Erwartetes Ereignis: Der eingegebene Name erscheint in der Liste der vorhandenen Therapeuten.
+
+Sofort erfüllt JA
+Nach Überarbeitung erfüllt
+
+---------------------------------------------------------------------
+Testfall 3: Therapeuten löschen
+
+Vorgangsbeschreibung: Der Benutzer klickt auf den dem zu löschenden Therapeuten zugeordneten "Therapeuten-löschen"-Button und bestätigt dieses.
+
+Mögliche Fehlermeldungen:
+	Die Bestätigung des Passworts stimmt nicht.
+	Der eingegebene Name existiert bereits in der Datenbank.
+
+Erwartetes Ereignis: Ein Bestätigungs-Dialog öffnet sich und nach Betätigen	des "OK"-Buttons wird der Therapeut aus der Liste der vorhandenen 	Therapeuten gelöscht.
+
+Sofort erfüllt JA
+Nach Überarbeitung erfüllt
+---------------------------------------------------------------------
+Testfall 4: Therapeuten ausloggen
+
+Vorgangsbeschreibung: Der Benutzer klickt auf den "Logout"-Button.
+
+Erwartetes Ereignis: Das aktuelle Fenster schließt und der Anmeldedialog ist wieder aktiv. Der Name des neu angelegten Therapeuten erscheint in 	der Liste der Benutzernamen
+
+Sofort erfüllt JA
+Nach Überarbeitung erfüllt
