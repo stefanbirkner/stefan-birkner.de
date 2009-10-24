@@ -1,0 +1,530 @@
+---generator(VISDOM)
+---timestamp(25.03.2002 16:02)
+
+
+CREATE TABLE artikel (
+	publikation_id INTEGER NOT NULL PRIMARY KEY REFERENCES publikation,
+	art VARCHAR(30),
+	startseite INTEGER
+);
+
+
+CREATE TABLE buch (
+	publikation_id INTEGER NOT NULL PRIMARY KEY REFERENCES publikation,
+	isbn VARCHAR(20),
+	art VARCHAR(30),
+	ausgabe VARCHAR(30),
+	auflage VARCHAR(20),
+	anzahlSeiten INTEGER
+);
+
+
+CREATE TABLE person
+(
+	id INTEGER NOT NULL PRIMARY KEY,
+	person VARCHAR(20)
+);
+
+
+CREATE TABLE schlagwort
+(
+	id INTEGER NOT NULL PRIMARY KEY,
+	schlagwort VARCHAR2(30),
+	istKategorie BOOLEAN NOT NULL DEFAULT 'f',
+);
+
+
+CREATE TABLE verlag(
+	id INTEGER NOT NULL PRIMARY KEY,
+	name VARCHAR(30) NOT NULL,
+	zusatz VARCHAR(30)
+);
+
+
+CREATE TABLE journal_serie
+(
+	id INTEGER NOT NULL PRIMARY KEY,
+	NAME VARCHAR2(30),
+	TYP VARCHAR2(30),
+	ISSN INTEGER,
+);
+
+
+
+---name(Ist_bestandteil_von)
+CREATE TABLE IST_BESTANDTEIL_VON
+(
+);
+
+CREATE TABLE publikation (
+	id INTEGER NOT NULL PRIMARY KEY
+	titel VARCHAR(30) NOT NULL,
+	untertitel VARCHAR(30),
+	sprache VARCHAR(2),
+	abstract VARCHAR(1),
+	bemerkung VARCHAR(1),
+	jahr INTEGER,
+	monat VARCHAR(8),
+	tag INTEGER,
+	preis_EUR FLOAT,
+	url VARCHAR(20),
+	person_id INTEGER NOT NULL REFERENCES person,
+	typ VARCHAR(11) NOT NULL,
+	verlag_id INTEGER REFERENCES verlag,
+);
+
+---name(Weist_hin)
+CREATE TABLE WEIST_HIN
+(
+    SCHLAGWORT_ID INTEGER NOT NULL,
+    PUBLIKATION_ID INTEGER NOT NULL,
+    CONSTRAINT PK_WEIST_HIN PRIMARY KEY
+    (
+        SCHLAGWORT_ID,
+        PUBLIKATION_ID
+    ),
+    CONSTRAINT FK_WEIST_HIN_1 FOREIGN KEY
+    (
+        SCHLAGWORT_ID
+    )
+    REFERENCES SCHLAGWORT
+    (
+        ID
+    ),
+    CONSTRAINT FK_WEIST_HIN_2 FOREIGN KEY
+    (
+        PUBLIKATION_ID
+    )
+    REFERENCES PUBLIKATION
+    (
+        ID
+    )
+);
+---name(Premisesland)
+CREATE TABLE PREMISESLAND
+(
+    LAND_ID INTEGER NOT NULL,
+    BUNDESLAND INTEGER,
+    LAND VARCHAR2(30),
+    CONSTRAINT PK_PREMISESLAND PRIMARY KEY
+    (
+        LAND_ID
+    )
+);
+---name(Organisation)
+CREATE TABLE ORGANISATION
+(
+    ID INTEGER NOT NULL,
+    NAME VARCHAR2(30),
+    URL INTEGER,
+    CONSTRAINT PK_ORGANISATION PRIMARY KEY
+    (
+        ID
+    )
+);
+---name(Premisesadress)
+CREATE TABLE PREMISESADRESS
+(
+    ADRESS_ID INTEGER NOT NULL,
+    STRASSE VARCHAR2(30),
+    HAUSNR INTEGER,
+    PLZ INTEGER,
+    ORT VARCHAR2(30),
+    ART VARCHAR2(30),
+    LAND_ID VARCHAR2(30),
+    PREMISESLAND_LAND_ID INTEGER,
+    CONSTRAINT PK_PREMISESADRESS PRIMARY KEY
+    (
+        ADRESS_ID
+    ),
+    CONSTRAINT FK_PREMISESADRESS_1 FOREIGN KEY
+    (
+        PREMISESLAND_LAND_ID
+    )
+    REFERENCES PREMISESLAND
+    (
+        LAND_ID
+    )
+);
+---name(Ist_ansaessig)
+CREATE TABLE IST_ANSAESSIG
+(
+    ORGANISATION_ID INTEGER NOT NULL,
+    PREMISESADRESS_ADRESS_ID INTEGER NOT NULL,
+    CONSTRAINT PK_IST_ANSAESSIG PRIMARY KEY
+    (
+        ORGANISATION_ID,
+        PREMISESADRESS_ADRESS_ID
+    ),
+    CONSTRAINT FK_IST_ANSAESSIG_1 FOREIGN KEY
+    (
+        ORGANISATION_ID
+    )
+    REFERENCES ORGANISATION
+    (
+        ID
+    ),
+    CONSTRAINT FK_IST_ANSAESSIG_2 FOREIGN KEY
+    (
+        PREMISESADRESS_ADRESS_ID
+    )
+    REFERENCES PREMISESADRESS
+    (
+        ADRESS_ID
+    )
+);
+
+
+CREATE TABLE ENTHAELT
+(
+    VOLUMEN INTEGER,
+    NUMMER INTEGER,
+    ARTIKELBUCH_PUBLIKATION_ID INTEGER NOT NULL,
+    JOURNALSERIE_ID INTEGER NOT NULL,
+    CONSTRAINT PK_ENTHAELT PRIMARY KEY
+    (
+        ARTIKELBUCH_PUBLIKATION_ID,
+        JOURNALSERIE_ID
+    ),
+    CONSTRAINT FK_ENTHAELT_1 FOREIGN KEY
+    (
+        ARTIKELBUCH_PUBLIKATION_ID
+    )
+    REFERENCES ARTIKELBUCH
+    (
+        PUBLIKATION_ID
+    ),
+    CONSTRAINT FK_ENTHAELT_2 FOREIGN KEY
+    (
+        JOURNALSERIE_ID
+    )
+    REFERENCES JOURNALSERIE
+    (
+        ID
+    )
+);
+---name(Hat_adresse)
+CREATE TABLE HAT_ADRESSE
+(
+    VERLAG_ID INTEGER NOT NULL,
+    PREMISESADRESS_ADRESS_ID INTEGER NOT NULL,
+    CONSTRAINT PK_HAT_ADRESSE PRIMARY KEY
+    (
+        VERLAG_ID,
+        PREMISESADRESS_ADRESS_ID
+    ),
+    CONSTRAINT FK_HAT_ADRESSE_1 FOREIGN KEY
+    (
+        VERLAG_ID
+    )
+    REFERENCES VERLAG
+    (
+        ID
+    ),
+    CONSTRAINT FK_HAT_ADRESSE_2 FOREIGN KEY
+    (
+        PREMISESADRESS_ADRESS_ID
+    )
+    REFERENCES PREMISESADRESS
+    (
+        ADRESS_ID
+    )
+);
+---name(Verweist_auf_andere)
+CREATE TABLE VERWEIST_AUF_ANDERE
+(
+    PUBLIKATION_0_ID INTEGER NOT NULL,
+    PUBLIKATION_1_ID INTEGER NOT NULL,
+    CONSTRAINT PK_VERWEIST_AUF_ANDERE PRIMARY KEY
+    (
+        PUBLIKATION_0_ID,
+        PUBLIKATION_1_ID
+    ),
+    CONSTRAINT FK_VERWEIST_AUF_ANDERE_1 FOREIGN KEY
+    (
+        PUBLIKATION_0_ID,
+        PUBLIKATION_1_ID
+    )
+    REFERENCES PUBLIKATION
+    (
+        ID,
+        ID
+    )
+);
+---name(Personneltitel)
+CREATE TABLE PERSONNELTITEL
+(
+    TITELCODE INTEGER NOT NULL,
+    TITELBEZ VARCHAR2(30),
+    TITELANREDE VARCHAR2(1),
+    CONSTRAINT PK_PERSONNELTITEL PRIMARY KEY
+    (
+        TITELCODE
+    )
+);
+---name(Autor_editor)
+CREATE TABLE AUTOR_EDITOR
+(
+    ID INTEGER NOT NULL,
+    NAME VARCHAR2(30) NOT NULL,
+    VORNAME VARCHAR2(30),
+    ANREDE VARCHAR2(4),
+    PERSONNELTITEL_TITELCODE INTEGER,
+    CONSTRAINT PK_AUTOR_EDITOR PRIMARY KEY
+    (
+        ID
+    ),
+    CONSTRAINT FK_AUTOR_EDITOR_1 FOREIGN KEY
+    (
+        PERSONNELTITEL_TITELCODE
+    )
+    REFERENCES PERSONNELTITEL
+    (
+        TITELCODE
+    )
+);
+---name(Veroeffentlicht)
+CREATE TABLE VEROEFFENTLICHT
+(
+    PUBLIKATION_ID INTEGER NOT NULL,
+    AUTOR_EDITOR_ID INTEGER NOT NULL,
+    CONSTRAINT PK_VEROEFFENTLICHT PRIMARY KEY
+    (
+        PUBLIKATION_ID,
+        AUTOR_EDITOR_ID
+    ),
+    CONSTRAINT FK_VEROEFFENTLICHT_1 FOREIGN KEY
+    (
+        PUBLIKATION_ID
+    )
+    REFERENCES PUBLIKATION
+    (
+        ID
+    ),
+    CONSTRAINT FK_VEROEFFENTLICHT_2 FOREIGN KEY
+    (
+        AUTOR_EDITOR_ID
+    )
+    REFERENCES AUTOR_EDITOR
+    (
+        ID
+    )
+);
+---name(Www)
+CREATE TABLE WWW
+(
+    GROESSE INTEGER,
+    PUBLIKATION_ID INTEGER NOT NULL,
+    CONSTRAINT PK_WWW PRIMARY KEY
+    (
+        PUBLIKATION_ID
+    ),
+    CONSTRAINT FK_WWW_1 FOREIGN KEY
+    (
+        PUBLIKATION_ID
+    )
+    REFERENCES PUBLIKATION
+    (
+        ID
+    )
+);
+---name(Bericht)
+CREATE TABLE BERICHT
+(
+    TYP VARCHAR2(30),
+    ANZAHLSEITEN INTEGER,
+    PUBLIKATION_ID INTEGER NOT NULL,
+    ORGANISATION_ID INTEGER,
+    CONSTRAINT PK_BERICHT PRIMARY KEY
+    (
+        PUBLIKATION_ID
+    ),
+    CONSTRAINT FK_BERICHT_1 FOREIGN KEY
+    (
+        PUBLIKATION_ID
+    )
+    REFERENCES PUBLIKATION
+    (
+        ID
+    ),
+    CONSTRAINT FK_BERICHT_2 FOREIGN KEY
+    (
+        ORGANISATION_ID
+    )
+    REFERENCES ORGANISATION
+    (
+        ID
+    )
+);
+---name(Hat_kommentiet)
+CREATE TABLE HAT_KOMMENTIET
+(
+    DATUM DATE NOT NULL,
+    KOMMENTAR VARCHAR2(1) NOT NULL,
+    NOTE INTEGER,
+    PUBLIKATION_ID INTEGER NOT NULL,
+    ZAEHLER_ID INTEGER NOT NULL,
+    PERSON_ID INTEGER NOT NULL,
+    CONSTRAINT PK_HAT_KOMMENTIET PRIMARY KEY
+    (
+        ZAEHLER_ID,
+        PERSON_ID
+    ),
+    CONSTRAINT U_HAT_KOMMENTIET_0 UNIQUE
+    (
+        PUBLIKATION_ID,
+        ZAEHLER_ID
+    ),
+    CONSTRAINT FK_HAT_KOMMENTIET_1 FOREIGN KEY
+    (
+        PUBLIKATION_ID
+    )
+    REFERENCES PUBLIKATION
+    (
+        ID
+    ),
+    CONSTRAINT FK_HAT_KOMMENTIET_2 FOREIGN KEY
+    (
+        ZAEHLER_ID
+    )
+    REFERENCES ZAEHLER
+    (
+        ID
+    ),
+    CONSTRAINT FK_HAT_KOMMENTIET_3 FOREIGN KEY
+    (
+        PERSON_ID
+    )
+    REFERENCES PERSON
+    (
+        ID
+    )
+);
+
+CREATE VIEW viewBuch AS
+SELECT *
+FROM buch INNER JOIN publikation ON publikation_id=id;/* 
+
+
+-------------------------------------------------------- 
+  phpPgAdmin 2.4a DB Dump
+  http://sourceforge.net/projects/phppgadmin/
+  Host: 192.168.2.100:5432
+  Database  : "literature"
+  2002-05-10 09:05:31
+-------------------------------------------------------- */ 
+
+/* -------------------------------------------------------- 
+  Sequences 
+-------------------------------------------------------- */ 
+CREATE SEQUENCE "person_id_seq" start 5 increment 1 maxvalue 9223372036854775807 minvalue 1 cache 1; 
+SELECT NEXTVAL('person_id_seq'); 
+CREATE SEQUENCE "publikation_id_seq" start 2 increment 1 maxvalue 9223372036854775807 minvalue 1 cache 1; 
+SELECT NEXTVAL('publikation_id_seq'); 
+CREATE SEQUENCE "verlag_id_seq" start 1 increment 1 maxvalue 9223372036854775807 minvalue 1 cache 1; 
+
+/* -------------------------------------------------------- 
+  Table structure for table "buch" 
+-------------------------------------------------------- */
+CREATE TABLE "buch" (
+   "publikation_id" int4 NOT NULL,
+   "isbn" varchar(20),
+   "art" varchar(30),
+   "ausgabe" varchar(30),
+   "auflage" varchar(20),
+   "anzahlseiten" int4,
+   CONSTRAINT "buch_pkey" PRIMARY KEY ("publikation_id")
+);
+
+
+/* -------------------------------------------------------- 
+  Dumping data for table "buch" 
+-------------------------------------------------------- */ 
+INSERT INTO "buch" ("publikation_id", "isbn", "art", "ausgabe", "auflage", "anzahlseiten") VALUES(2, '', 'Zeitschrift', '4.2002', '', 108);
+
+/* -------------------------------------------------------- 
+  Table structure for table "person" 
+-------------------------------------------------------- */
+CREATE TABLE "person" (
+   "id" int4 DEFAULT nextval('"person_id_seq"'::text) NOT NULL,
+   "person" varchar(20),
+   CONSTRAINT "person_pkey" PRIMARY KEY ("id")
+);
+
+
+/* -------------------------------------------------------- 
+  Dumping data for table "person" 
+-------------------------------------------------------- */ 
+INSERT INTO "person" ("id", "person") VALUES(5, 'neue Person');
+INSERT INTO "person" ("id", "person") VALUES(1, 'Stefan Birkner');
+
+/* -------------------------------------------------------- 
+  Table structure for table "publikation" 
+-------------------------------------------------------- */
+CREATE TABLE "publikation" (
+   "id" int4 DEFAULT nextval('"publikation_id_seq"'::text) NOT NULL,
+   "titel" varchar(30) NOT NULL,
+   "untertitel_old" varchar(30),
+   "sprache" varchar(2),
+   "abstract" varchar(1),
+   "bemerkung" varchar(1),
+   "jahr" int4,
+   "monat" varchar(8),
+   "tag" int4,
+   "preis_eur" int4,
+   "url" varchar(20),
+   "person_id" int4 NOT NULL,
+   "typ" varchar(11) NOT NULL,
+   "verlag_id" int4,
+   "untertitel" varchar(100),
+   CONSTRAINT "publikation_pkey" PRIMARY KEY ("id")
+);
+
+
+/* -------------------------------------------------------- 
+  Dumping data for table "publikation" 
+-------------------------------------------------------- */ 
+INSERT INTO "publikation" ("id", "titel", "untertitel_old", "sprache", "abstract", "bemerkung", "jahr", "monat", "tag", "preis_eur", "url", "person_id", "typ", "verlag_id", "untertitel") VALUES(2, 'Java Magazin 04.02 ', '', 'de', '', '', 2002, '03', 0, 5, 'www.java-magazin.de', 1, 'buch', 1, 'Internet & Enterprise Technology');
+INSERT INTO "publikation" ("id", "titel", "untertitel_old", "sprache", "abstract", "bemerkung", "jahr", "monat", "tag", "preis_eur", "url", "person_id", "typ", "verlag_id", "untertitel") VALUES(1, 'Fliegen in der Nacht', '', 'de', '', '', 2002, '04', 0, 0, '', 1, 'Artikel', 1, 'Der Web-Framework Apache Struts in Version 1.0: Power für Web-Anwendungen');
+
+/* -------------------------------------------------------- 
+  Table structure for table "verlag" 
+-------------------------------------------------------- */
+CREATE TABLE "verlag" (
+   "id" int4 DEFAULT nextval('"verlag_id_seq"'::text) NOT NULL,
+   "name" varchar(30) NOT NULL,
+   "zusatz" varchar(30),
+   CONSTRAINT "verlag_pkey" PRIMARY KEY ("id")
+);
+
+
+/* -------------------------------------------------------- 
+  Dumping data for table "verlag" 
+-------------------------------------------------------- */ 
+INSERT INTO "verlag" ("id", "name", "zusatz") VALUES(1, 'Software & Support Verlag', 'GmbH');
+
+/* -------------------------------------------------------- 
+  Views 
+-------------------------------------------------------- */ 
+CREATE VIEW "viewbuch" AS SELECT buch.publikation_id, buch.isbn, buch.art, buch.ausgabe, buch.auflage, buch.anzahlseiten, publikation.id, publikation.titel, publikation.untertitel_old, publikation.sprache, publikation.abstract, publikation.bemerkung, publikation.jahr, publikation.monat, publikation.tag, publikation.preis_eur, publikation.url, publikation.person_id, publikation.typ, publikation.verlag_id, publikation.untertitel FROM (buch JOIN publikation ON ((buch.publikation_id = publikation.id))); 
+
+
+/* -------------------------------------------------------- 
+  Functions 
+-------------------------------------------------------- */ 
+CREATE FUNCTION plpgsql_call_handler() RETURNS OPAQUE AS '$libdir/plpgsql','plpgsql_call_handler' LANGUAGE 'C'; 
+
+/* -------------------------------------------------------- 
+  Triggers 
+-------------------------------------------------------- */ 
+CREATE CONSTRAINT TRIGGER "RI_ConstraintTrigger_25979" AFTER UPDATE ON "person" NOT DEFERRABLE INITIALLY IMMEDIATE FOR EACH ROW EXECUTE PROCEDURE "RI_FKey_noaction_upd" ('<unnamed>', 'publikation', 'person', 'UNSPECIFIED', 'person_id', 'id');
+CREATE CONSTRAINT TRIGGER "RI_ConstraintTrigger_25977" AFTER DELETE ON "person" NOT DEFERRABLE INITIALLY IMMEDIATE FOR EACH ROW EXECUTE PROCEDURE "RI_FKey_noaction_del" ('<unnamed>', 'publikation', 'person', 'UNSPECIFIED', 'person_id', 'id');
+CREATE CONSTRAINT TRIGGER "RI_ConstraintTrigger_25985" AFTER UPDATE ON "verlag" NOT DEFERRABLE INITIALLY IMMEDIATE FOR EACH ROW EXECUTE PROCEDURE "RI_FKey_noaction_upd" ('<unnamed>', 'publikation', 'verlag', 'UNSPECIFIED', 'verlag_id', 'id');
+CREATE CONSTRAINT TRIGGER "RI_ConstraintTrigger_25983" AFTER DELETE ON "verlag" NOT DEFERRABLE INITIALLY IMMEDIATE FOR EACH ROW EXECUTE PROCEDURE "RI_FKey_noaction_del" ('<unnamed>', 'publikation', 'verlag', 'UNSPECIFIED', 'verlag_id', 'id');
+CREATE CONSTRAINT TRIGGER "RI_ConstraintTrigger_25997" AFTER INSERT OR UPDATE ON "buch" NOT DEFERRABLE INITIALLY IMMEDIATE FOR EACH ROW EXECUTE PROCEDURE "RI_FKey_check_ins" ('<unnamed>', 'buch', 'publikation', 'UNSPECIFIED', 'publikation_id', 'id');
+CREATE CONSTRAINT TRIGGER "RI_ConstraintTrigger_26001" AFTER UPDATE ON "publikation" NOT DEFERRABLE INITIALLY IMMEDIATE FOR EACH ROW EXECUTE PROCEDURE "RI_FKey_noaction_upd" ('<unnamed>', 'buch', 'publikation', 'UNSPECIFIED', 'publikation_id', 'id');
+CREATE CONSTRAINT TRIGGER "RI_ConstraintTrigger_25999" AFTER DELETE ON "publikation" NOT DEFERRABLE INITIALLY IMMEDIATE FOR EACH ROW EXECUTE PROCEDURE "RI_FKey_noaction_del" ('<unnamed>', 'buch', 'publikation', 'UNSPECIFIED', 'publikation_id', 'id');
+CREATE CONSTRAINT TRIGGER "RI_ConstraintTrigger_25981" AFTER INSERT OR UPDATE ON "publikation" NOT DEFERRABLE INITIALLY IMMEDIATE FOR EACH ROW EXECUTE PROCEDURE "RI_FKey_check_ins" ('<unnamed>', 'publikation', 'verlag', 'UNSPECIFIED', 'verlag_id', 'id');
+CREATE CONSTRAINT TRIGGER "RI_ConstraintTrigger_25975" AFTER INSERT OR UPDATE ON "publikation" NOT DEFERRABLE INITIALLY IMMEDIATE FOR EACH ROW EXECUTE PROCEDURE "RI_FKey_check_ins" ('<unnamed>', 'publikation', 'person', 'UNSPECIFIED', 'person_id', 'id');
+
+

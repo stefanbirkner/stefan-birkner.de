@@ -1,0 +1,34 @@
+<style>
+
+TABLE.infotableframe {
+            background:#000000;
+            font-size:10pt;
+}
+
+TD.infotabletitle  {
+            font-family:arial,helvetica,lucida;
+            font-size:11pt;
+            font-weight:bold;
+            background:#6b6b6b;
+            color:#ffffff
+}
+TD.infotabletd {
+            font-family:arial,helvetica,lucida;
+            font-size:10pt;
+            font-weight:bold;
+            background:#6b6b6b;
+            color:#eeeeee
+}
+TR.infotablecell1 {
+	font-size:10pt;
+        background:#eff1ff;
+	color: #000000;            
+}
+
+TR.infotablecell2 {
+	font-size:10pt;
+        background:#dbe0ff;
+	color: #000000;            
+}
+
+</style>

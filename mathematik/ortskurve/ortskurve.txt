@@ -1,0 +1,5 @@
+set terminal png  	#Ausgabeformat PNG
+set output "ortskurve.png" 	#Ausgabedatei ortskurve.png
+set parametric 	#Modus parametrisierte Kurven wählen
+set trange [ 0 : 20000 ] 	#Wertebereich für ω
+plot 2 + 1/(1 + (t * 0.2 * 10**(-6))**2 * 1000**2), t * (0.15/1000 - 1/(1/(0.2 * 10**(-6)) + t**2 * 0.2 * 10**(-6)/1000)) title "Z" 	#Kurve zeichnen
