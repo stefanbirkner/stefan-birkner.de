@@ -1,7 +1,7 @@
 /* file:                 main.css                                      */ 
 /* author:               Stefan Birkner                                */ 
 /* date of creation:     11.10.2000                                    */ 
-/* date of last change:  04.12.2001                                    */ 
+/* date of last change:  25.10.2009                                    */ 
 /* abstract:             Dies ist die css-Datei die ich als Basis für  */
 /*                       meine Web-Seiten verwende.                    */ 
  
@@ -84,6 +84,10 @@ a { text-decoration:none;
     font-weight:bold; }
   
 a:hover { background-color:#ff9090; }
+
+.breadcrumb {
+	padding-left:0;
+}
 
 .raised {
 	background-color: #eeeeee;
