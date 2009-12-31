@@ -21,12 +21,12 @@ p,h1,h2,h3,h4,ul,ol,li,div,td,th,i,form {
 h1,h2,h3,h4,h5,h6,a {
 	color:#000000; }
 
-p,h1,h2,h3,h4,h5,h6,form {
+form,h1,h2,h3,h4,h5,h6,p,ul {
 	padding-top: 2pt;
 	padding-bottom: 2pt;
 	margin: 0px; }
 
-p, form {
+form,p {
 	text-align:justify;
 	padding-right: 5pt;
 	padding-left: 5pt; }
@@ -75,15 +75,16 @@ td.history { color:#32e632;
 td.background { background-color:#c89632; 
                 color:#000000;  }
 
-ul {
-	margin-top:0px; }
-
 img { border:0; } 
 
 a { text-decoration:none;
     font-weight:bold; }
   
 a:hover { background-color:#ff9090; }
+
+ul {
+	padding-left:1em;
+	padding-right:0.5em; }
 
 .breadcrumb {
 	padding-left:0;
