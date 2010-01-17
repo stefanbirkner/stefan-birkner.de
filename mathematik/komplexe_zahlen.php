@@ -41,7 +41,13 @@
     <link rel="stylesheet" type="text/css" href="mathematics.css"/> 
   </head> 
  
-  <body> 
+  <body>
+	<p class="breadcrumb">
+		<a href="/">Stefan Friedrich Birkner</a> &gt;
+		<a href="/mathematik/">Mathematik</a> &gt;
+		Umrechnung komplexer Zahlen
+	</p>
+
     <h2>Umrechnung komplexer Zahlen</h2> 
 
     <p>
@@ -111,8 +117,6 @@
            print("z = ".$compRealteil." + ".$compImaginaerteil."j"); 
         ?> 
       </p> 
-    </form> 
- 
-    <p><a href=".">zur Hauptseite Mathematik</a></p> 
+    </form>
   </body> 
 </html>

@@ -36,16 +36,22 @@
   "DTD/xhtml1-transitional.dtd"> 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
 	<head>
-		<title>Koordinatensystem</title> 
+		<title>Koordinatensystem erstellen</title> 
 		<meta name="author" content="Stefan Birkner"/>
 		<link rel="stylesheet" type="text/css" href="../sb.css"/> 
 		<link rel="stylesheet" type="text/css" href="mathematics.css"/> 
 	</head> 
  
-	<body> 
+	<body>
+		<p class="breadcrumb">
+			<a href="/">Stefan Friedrich Birkner</a> &gt;
+			<a href="/mathematik/">Mathematik</a> &gt;
+			Koordinatensystem erstellen
+		</p>
+
 		<h2>Koordinatensystem erstellen</h2> 
 
-		<p>Hier k&ouml;nnen sie sich ein Koordinatensystem als SVG-Grafik
+		<p>Hier k&ouml;nnen Sie sich ein Koordinatensystem als SVG-Grafik
 		erzeugen lassen. Die generierte Datei ist &uuml;bersichtlich gestaltet,
 		sodass sie sich problemlos weiterverarbeiten l&auml;sst.</p>
  
@@ -110,7 +116,5 @@
 	&lt;/g&gt;
 &lt;/svg&gt;
 		</pre><?php } ?>
-
-		<p><a href=".">zur Hauptseite Mathematik</a></p> 
 	</body> 
 </html>
