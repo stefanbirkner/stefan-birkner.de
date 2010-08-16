@@ -8,19 +8,6 @@ h1,h2 {
 	max-width:600pt;
 }
 
-h1 {
-	font-family: Times,'Times New Roman',serif;
-	font-size:30pt;
-	font-stretch:wider;
-	font-variant:small-caps;
-	font-weight:normal;
-	letter-spacing:0.1em;
-	text-align:center;
-	margin-top:0.5em;
-	margin-bottom:0.5em;
-	border-style:none;
-}
-
 h3,h4,h5,h6,p,form,ul {
 	max-width:590pt;
 	margin-left:5pt;
