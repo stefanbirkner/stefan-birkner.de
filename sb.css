@@ -12,7 +12,7 @@ body {
 	padding:20px;
 	padding-top:5px; }
  
-p,h1,h2,h3,h4,ul,ol,li,div,td,th,i,form {
+p,h1,h2,h3,h4,ul,ol,li,div,td,th,i,form,nav {
 	color:#303030; 
 	font-family: Helvetica,Arial,sans-serif;
 	font-size:10pt;
@@ -35,15 +35,19 @@ h1,h2,h3,h4,h5,h6 {
 	margin-top: 3pt;
 	padding-right: 2pt;
 	padding-left: 2pt; }
- 
+
 h1 {
-	font-size:24pt;
-	font-weight:bold; 
-	border-bottom-style:solid;
-	border-bottom-color:#000000;
-	border-bottom-width:medium;
-	margin-bottom: 5pt; 
-	padding-top:5px; }
+	font-family: Times,'Times New Roman',serif;
+	font-size:30pt;
+	font-stretch:wider;
+	font-variant:small-caps;
+	font-weight:normal;
+	letter-spacing:0.1em;
+	text-align:center;
+	margin-top:0.5em;
+	margin-bottom:0.5em;
+	border-style:none;
+}
 
 h2 {
 	font-size:20pt;
