@@ -13,3 +13,10 @@ You can see the website at http://localhost:4000 if you run Grunt.
 
 The default task uses Jekyll to serve the site.
 
+Deployment
+----------
+
+Commit the current changes and then run
+
+    npm install
+    grunt deploy
