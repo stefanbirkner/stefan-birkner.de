@@ -1,7 +1,5 @@
 /* file:                 sb.css                                        */ 
-/* author:               Stefan Birkner                                */ 
-/* date of creation:     11.10.2000                                    */ 
-/* date of last change:  08.09.2009                                    */ 
+/* author:               Stefan Birkner                                */
 /* abstract:             Dies ist die css-Datei die ich als Basis für  */
 /*                       meine Web-Seiten verwende.                    */ 
  
@@ -45,7 +43,7 @@ h1 {
 	letter-spacing:0.1em;
 	text-align:center;
 	margin-top:0.5em;
-	margin-bottom:0.5em;
+	margin-bottom:0.1em;
 	border-style:none;
 }
 
@@ -66,6 +64,8 @@ h3 {
 h4 { font-size:14pt; } 
 h5 { font-size:12pt; } 
 h6 { font-size:11pt; } 
+
+header { margin-bottom:1em; }
 
 td, th {
 	vertical-align: top;
