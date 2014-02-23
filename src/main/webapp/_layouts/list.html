@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ page.language }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/normalize.css">
+    <link href="http://fonts.googleapis.com/css?family=Voces" rel="stylesheet" type="text/css">
+    {% include author.html %}
+    <style type="text/css">
+      body {
+        background-color:#2e2e2e;
+        border-left:1px solid #aaa;
+        color:white;
+        font-family:'Voces',cursive;
+        margin:0 0 0 50px;
+        padding:0;
+      }
+      h1 {
+        letter-spacing:0.1em;
+        margin-left:30px;
+        margin-top:0;
+        padding-top:3em;
+      }
+      p {
+        margin-left:30px;
+      }
+      ul {
+        line-height:2em;
+        list-style:none;
+        margin-left:30px;
+      }
+      a {
+        color:white;
+        padding:2px;
+      }
+      a:hover {
+        background-color:green;
+      }
+      .content {
+        border-left:1px solid #aaa;
+        margin-left:200px;
+        margin-top:0;
+        padding-bottom:2em;
+      }
+      .image {
+        float:left;
+        margin:0;
+        padding-top:5em;
+      }
+    </style>
+  </head> 
+  <body{% if page.itemtype %} itemscope itemtype="{{ page.itemtype }}"{% endif %}>
+    {{ content }}
+  </body>
+</html>

@@ -1,45 +1,27 @@
 ---
+layout: list
+itemtype: http://data-vocabulary.org/Person
+language: de
+title: Homepage von Stefan Birkner
+description: Homepage von Stefan Birkner
 ---
-<!DOCTYPE html>
-<html lang="de">
-	<head> 
-		<title>Homepage von Stefan Birkner</title>
-		<meta charset="UTF-8" />
-		<meta name="description" content="Homepage von Stefan Birkner" /> 
-		<meta name="keywords" content="Stefan Birkner, Homepage" /> 
-		<link rel="stylesheet" type="text/css" href="reset-min.css" />
-		<link rel="stylesheet" type="text/css" href="sb.css" />
-		{% include author.html %}
-	</head> 
- 
-	<body itemscope itemtype="http://data-vocabulary.org/Person">
-		<header>
-			<h1 itemprop="name">Stefan Birkner</h1>
-			<p style="text-align:center;"><span itemprop="role">Softwareentwickler</span> aus <span itemprop="address" itemscope
+<p class="image">
+  <img src="http://www.gravatar.com/avatar/ea05821b3d42324bb24a7c90df70a3ff.png?s=200" height="200" width="200" alt="Portr&auml;t von Stefan Birkner" itemprop="photo" />
+</p>
+       
+<div class="content"> 
+  <h1 itemprop="name">Stefan Birkner</h1>
+
+  <p><span itemprop="role">Softwareentwickler</span> aus <span itemprop="address" itemscope
     itemtype="http://data-vocabulary.org/Address"><span itemprop="locality">Berlin</span></span></p>
-		</header>
-
-		<nav style="position:fixed;top:10em;margin-left:49%;text-align:left;list-style-type:none;">
-			<ul>
-				<li><a href="stefan.html">Über mich</a></li>
-				<li><a href="Indien/">Indienreise</a></li>
-				<li><a href="mathematik/">Mathematik</a></li>
-				<li><a href="http://de.wikipedia.org/wiki/Benutzer:Stefan%20Birkner">Wikipedia</a></li>
-				<li><a href="http://delicious.com/logn2">Empfohlene Links</a></li>
-				<li><a href="Information%20Retrieval%202010">Information Retrieval</a></li>
-			</ul>
-
-			<p style="padding-left:1em;padding-top:3em;">
-				E-Mail an mich: <a href="mailto:mail@stefan-birkner.de">mail@stefan-birkner.de</a>
-			</p>
-		</nav>
-
-		<article>
-			<p style="margin-left:-24em;text-align:center;">
-				<img src="pictures/homepage0704.jpg" height="239" width="181"
-				     alt="Portr&auml;t von Stefan Birkner"
-				     itemprop="photo" />
-			</p>
-		</article>
-	</body>
-</html>
+    
+  <ul>
+    <li><a href="stefan.html">Über mich</a></li>
+    <li><a href="Indien/">Indienreise</a></li>
+    <li><a href="mathematik/">Mathematik</a></li>
+    <li><a href="http://de.wikipedia.org/wiki/Benutzer:Stefan%20Birkner">Wikipedia</a></li>
+    <li><a href="http://delicious.com/logn2">Empfohlene Links</a></li>
+    <li><a href="Information%20Retrieval%202010">Information Retrieval</a></li>
+    <li>E-Mail: <a href="mailto:mail@stefan-birkner.de">mail@stefan-birkner.de</a></li>
+  </ul>
+</div>
