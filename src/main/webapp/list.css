@@ -1,0 +1,40 @@
+body {
+  background-color:#2e2e2e;
+  border-left:1px solid #aaa;
+  color:white;
+  font-family:'Voces',cursive;
+  margin:0 0 0 50px;
+  padding:0;
+}
+h1 {
+  letter-spacing:0.1em;
+  margin-left:30px;
+  margin-top:0;
+  padding-top:3em;
+}
+p {
+  margin-left:30px;
+}
+ul {
+  line-height:2em;
+  list-style:none;
+  margin-left:30px;
+}
+a {
+  color:white;
+  padding:2px;
+}
+a:hover {
+  background-color:green;
+}
+.content {
+  border-left:1px solid #aaa;
+  margin-left:200px;
+  margin-top:0;
+  padding-bottom:2em;
+}
+.image {
+  float:left;
+  margin:0;
+  padding-top:5em;
+}
