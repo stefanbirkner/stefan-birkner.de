@@ -22,12 +22,16 @@ module.exports = function(grunt) {
     },
     jekyll: {
       serve: {
-        src: 'src/main/webapp',
-        serve: true
+        options: {
+          src: 'src/main/webapp',
+          serve: true
+        }
       },
       package: {
-        src: 'src/main/webapp',
-        dest: 'target'
+        options: {
+          src: 'src/main/webapp',
+          dest: 'target'
+        }
       }
     }
   });
