@@ -1,0 +1,7 @@
+{
+    "name": "stefan-birkner.de",
+    "version": "0.1.0",
+    "dependencies": {
+        "normalize-css": "~3.0.0"
+    }
+}
