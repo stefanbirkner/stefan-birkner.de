@@ -23,13 +23,13 @@ module.exports = function(grunt) {
     jekyll: {
       serve: {
         options: {
-          src: 'src/main/webapp',
+          src: 'app',
           serve: true
         }
       },
       package: {
         options: {
-          src: 'src/main/webapp',
+          src: 'app',
           dest: 'target'
         }
       }
