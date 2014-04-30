@@ -1,0 +1,148 @@
+<?xml version=\"1.0\" encoding=\"utf-8\"?>
+<!DOCTYPE html 
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+  "DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+  <head>
+    <title>Ortskurven mit Gnuplot zeichnen</title> 
+    <meta name="author" content="Stefan Birkner"/> 
+    <meta name="keywords" 
+          content="Ortskurve, Elektrotechnik, Gnuplot"/> 
+    <link rel="stylesheet" type="text/css" href="../sb.css"/> 
+    <link rel="stylesheet" type="text/css" href="mathematics.css"/> 
+  </head> 
+ 
+  <body>
+	<p class="breadcrumb">
+		<a href="/">Stefan Friedrich Birkner</a> &gt;
+		<a href="/mathematik/">Mathematik</a> &gt;
+		Ortskurven mit Gnuplot zeichnen
+	</p>
+
+    <h2>Ortskurven mit Gnuplot zeichnen</h2> 
+
+    <p>In der Elektrotechnik werden Ortskurven verwendet, um das
+	parameterabh&auml;ngige Verhalten von Netzwerkfunktionen darzustellen.
+	Dieser Artikel zeigt an einem Beispiel wie sich eine Ortskurve mit
+	Gnuplot zeichnen l&auml;sst.</p>
+
+	<h3>1. Schritt: Netzwerkfunktion berechnen</h3>
+
+	<p>Als Beispiel betrachten wir das folgende Netzwerk mit dem komplexen
+	Widerstand als Netzwerkfunktion.</p>
+
+	<p style="text-align:center;">
+		<object data="ortskurve/netzwerk.svg" type="image/svg+xml" width="410" height="160">
+			<param name="src" value="ortskurve/netzwerk.svg"/>
+			<img src="ortskurve/netzwerk.png" height="160" width="410" alt="Schaltungsskizze"/>
+		</object>
+	</p>
+	
+	<p>Der komplexe Widerstand dieses Netzwerks berechnet sich zu</p>
+
+	<p class="formulaOneLine">
+		<img src="ortskurve/Formel Netzwerkfunktion.png" height="50" width="413" alt="Formel Netzwerkfunktion"/>
+	<!-- \underline Z(j \omega) = 2 \, \text{k}\Omega + j \omega \cdot 150 \,
+	\text{mH} + \frac{1}{\frac{1}{1 \, \text{k}\Omega} + j \omega \cdot 0{,}2
+	\, \mu \text{F}} -->
+	</p>
+
+	<h3>2. Schritt: Real- und Imagin&auml;rteil der Netzwerkfunktion
+	trennen</h3>
+
+	<p class="formulaOneLine">
+		<img src="ortskurve/formel2.png" height="52" width="586" alt="Trennung Real und Imagin&auml;rteil (Zeile 1)"/><br/>
+		<!-- \underline Z(j \omega) = 2 \, \text{k}\Omega + j \omega \cdot 150
+		\, \text{mH} + \frac{\frac{1}{1 \, \text{k}\Omega} - j \omega \cdot
+		0{,}2 \, \mu \text{F}}{\frac{1}{(1 \, \text{k}\Omega} + j \omega \cdot
+		0{,}2 \, \mu \text{F})(\frac{1}{1 \, \text{k}\Omega} - j \omega \cdot
+		0{,}2 \, \mu \text{F})} -->
+		<img src="ortskurve/formel3.png" height="52" width="674" alt="Trennung Real und Imagin&auml;rteil (Zeile 2)"/>
+		<!-- \underline Z(j \omega) = 2 \, \text{k}\Omega + j \omega \cdot 150
+		\, \text{mH} + \frac{1}{\frac{1}{1 \, \text{k}\Omega} + (\omega \cdot
+		0{,}2 \, \mu \text{F})^2 \cdot 1 \, \text{k}\Omega} - j \cdot
+		\frac{1}{\frac{1}{1 \, \text{k}\Omega \cdot \omega \cdot 0{,}2 \, \mu
+		\text{F}} + \omega \cdot 0{,}2 \, \mu \text{F}}-->
+	</p>
+
+	<p>Aus der letzten Gleichung l&auml;sst sich die Realteilfunktion
+	<span class="formula">Re(&omega;)</span> und die
+	Imagin&auml;rteilfunktion <span class="formula">Im(&omega;)</span>
+	ablesen.</p>
+
+	<p class="formulaOneLine">
+		<img src="ortskurve/Formel Realteil.png" height="37" width="322" alt="Formel Realteil"/><br/>
+		<!-- Re(\omega) = \begin{bmatrix}2 + \frac{1}{1 + (\omega \cdot 0{,}2
+		\, \mu \text{F})^2 \cdot (1 \, \text{k}\Omega)^2}\end{bmatrix} \cdot 1
+		\, \text{k}\Omega -->
+		<img src="ortskurve/Formel Imaginaerteil.png" height="53" width="392" alt="Formel Imagin&auml;rteil"/><br/>
+		<!-- Im(\omega) = \omega \cdot 150 \, \text{mH} - \frac{1}{\frac{1}{1
+		\, \text{k}\Omega \cdot \omega \cdot 0{,}2 \, \mu \text{F}} + \omega
+		\cdot 0{,}2 \, \mu \text{F}} -->
+		<img src="ortskurve/Formel Imaginaerteil 2.png" height="40" width="367" alt="Formel Imagin&auml;rteil"/>
+		<!-- Im(\omega) = \omega \cdot \begin{bmatrix} \frac{150 \, \text{mH}}{1 \, \text{k}\Omega} - \frac{1}{\frac{1}{0{,}2 \, \mu \text{F}} + \omega^2
+		\cdot \frac{0{,}2 \, \mu \text{F}}{1 \, \text{k}\Omega}}\end{bmatrix} \cdot 1
+		\, \text{k}\Omega -->
+	</p>
+
+	<h3>3. Schritt: Gnuplot-Skript erstellen</h3>
+
+	<p>Mit einem Texteditor erstellen wir das folgende Gnuplot-Skript
+	(<a href="ortskurve/ortskurve.txt">ortskurve.txt</a>).</p>
+	<table style="border-width:1px;border-style:solid;border-spacing:0">
+		<tr>
+			<th style="width:35em;border-right-width:1px;border-right-style:solid;border-bottom-width:1px;border-bottom-style:solid;">Befehl</th>
+			<th style="border-bottom-width:1px;border-bottom-style:solid;">Erkl&auml;rung</th>
+		</tr>
+		<tr>
+			<td style="border-right-width:1px;border-right-style:solid;">set terminal png</td>
+			<td>#Ausgabeformat PNG</td>
+		</tr>
+		<tr class="even">
+			<td style="border-right-width:1px;border-right-style:solid;">set output &quot;ortskurve.png&quot;</td>
+			<td>#Ausgabedatei ortskurve.png</td>
+		</tr>
+		<tr>
+			<td style="border-right-width:1px;border-right-style:solid;">set parametric</td>
+			<td>#Modus parametrisierte Kurven w&auml;hlen</td>
+		</tr>
+		<tr class="even">
+			<td style="border-right-width:1px;border-right-style:solid;">set trange [ 0 : 20000 ]</td>
+			<td>#Wertebereich f&uuml;r &omega;</td>
+		</tr>
+		<tr>
+			<td style="border-right-width:1px;border-right-style:solid;">
+				plot 2 + 1/(1 + (t * 0.2 * 10**(-6))**2 * 1000**2), t * (0.15/1000 - 1/(1/(0.2 * 10**(-6)) + t**2 * 0.2 * 10**(-6)/1000)) title &quot;Z&quot;
+			</td>
+			<td>#Kurve zeichnen</td>
+		</tr>
+	</table>
+	<p>Die Funktion zum Zeichnen der Kurve hat folgendes Format</p>
+	<p class="formulaOneLine">plot &lt;Re(t)&gt;,&lt;Im(t)&gt; title &quot;&lt;title&gt;&quot;</p>
+	<p>F&uuml;r den Parameter <span class="formula">&lt;Re(t)&gt;</span> wird die
+	Realteilfunktion und f&uuml;r den Parameter
+	<span class="formula">&lt;Im(t)&gt;</span> die Imagin&auml;rteilfunktion
+	eingesetzt. Bei der Angabe der Formeln wird die Variable
+	<span class="formula">&omega;</span> in <span class="formula">t</span>
+	umbenannt und das Potenzieren erfolgt mittels
+	<span class="formula">**</span>. Der Ausdruck
+	<span class="formula">t<sup>2</sup></span> wird beispielsweise
+	<span class="formula">t**2</span> geschrieben. Der frei w&auml;hlbare
+	Parameter <span class="formula">&lt;title&gt;</span> erscheint im
+	Graphen als Bezeichnung der Kurve.</p>
+
+	<h3>4. Schritt: Graph zeichnen</h3>
+	<p>Gibt man nun auf der Kommandozeile den Befehl</p>
+	<p class="formulaOneLine">gnuplot ortskurve.txt</p>
+	<p>ein, erzeugt Gnuplot eine Datei
+	<span class="formula">ortskurve.png</span> mit dem folgenden Bild.</p>
+	<p style="text-align:center;">
+		<img src="ortskurve/ortskurve.png" height="480" width="640" alt="Graph der Ortskurve"/>
+	</p>
+
+    <h3>Weiterf&uuml;hrende Informationen</h3>
+	<ul>
+		<li><a href="http://www.gnuplot.info">Gnuplot-Homepage</a></li>
+	</ul>
+  </body> 
+</html>

@@ -1,0 +1,44 @@
+/* file:                 mathematics.css                                */ 
+/* author:               Stefan Birkner                                */
+/* date of last change:  09.11.2006                                    */ 
+/* abstract:             An additional style sheet for pages about     */
+/*                       mathematics.                                  */ 
+
+h1,h2 {
+	max-width:600pt;
+}
+
+h3,h4,h5,h6,p,form,ul {
+	max-width:590pt;
+	margin-left:5pt;
+}
+
+form {
+	background-color:#ddddff;
+	margin:0.5em 1em;
+	max-width:560pt;
+	border-width:0cm; 
+	padding:0.5cm; 
+	text-align:center;   /* Irgendwann für CSS2.0 durch alignment:center ersetzen */
+}
+
+table {
+	margin-left:10pt;
+}
+
+th {
+	background-color:#dddddd;
+}
+
+tr.even th,tr.even td {
+	background-color:#f2f2f2;
+}
+
+.formula {
+	font-style:italic;
+}
+
+.formulaOneLine {
+	font-style:italic;
+	padding-left:1cm;
+}

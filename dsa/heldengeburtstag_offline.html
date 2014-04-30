@@ -1,0 +1,145 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<title>Heldengeburtstag</title>
+<meta name="author" content="Stefan Birkner">
+<meta name="keywords" content="Spiele, DSA, Heldengeburtstag, Heldenerschaffung, Geburtstag, Erschaffung">
+<meta name="generator" content="Ulli Meybohms HTML EDITOR">
+<style type="text/css">
+<!--
+body { margin-top:10px;
+       margin-bottom:10px; }
+
+p,h1,h2,h3,h4,ul,ol,li,div,td,th,address,blockquote,nobr,b,i
+     { font-family:Arial,sans-serif;
+     text-align:justify; }
+
+h2 { font-size:24pt;
+     text-align:center; }
+
+h3 { font-size:16pt;
+     text-align:center; }
+
+h4 { font-size:14pt;
+     text-align:center; }
+
+h5 { font-size:14pt;
+     text-align:left; }
+
+p,ul,ol,li,div,td,th,address,nobr,b,i { font-size:10pt; }
+
+td,th { border-width:1pt; }
+
+a:link { color:#0000FF; text-decoration:underline; }
+a:visited { color:#0000FF; text-decoration:underline; }
+a:active { color:#0000FF; text-decoration:none; }//-->
+</style>
+<script language="JavaScript">
+<!--
+function neuer_Heldengeburtstag()
+{
+   var Tag, Monat, Geschenke;
+
+   /*Geburtstag auswürfeln*/
+   Tag = Math.round((30 * Math.random()) + 0.5 );
+   switch(Math.round((20 * Math.random()) + 0.5 ))
+   {
+      case 1:
+      case 2:
+         Monat = "Praios";
+         Geschenke = "Mut +1";
+         break;
+      case 3:
+      case 4:
+         Monat = "Rondra";
+         Geschenke = "Talent &quot;Schwerter&quot; +1";
+         break;
+      case 5:
+      case 6:
+         Monat = "Efferd";
+         Geschenke = "Talente &quot;Schwimmen&quot; und &quot;Boote Fahren&quot; +1";
+         break;
+      case 7:
+      case 8:
+         Monat = "Travia";
+         Geschenke = "Intuition +1";
+         break;
+      case 9:
+      case 10:
+         Monat = "Boron";
+         Geschenke = "Talent &quot;Menschenkenntnis&quot; +1";
+         break;
+      case 11:
+         Monat = "Hesinde";
+         Geschenke = "Talent &quot;Alchimie&quot; +1";
+         break;
+      case 12:
+         Monat = "Firun";
+         Geschenke = "Talente &quot;F&auml;hrtensuchen&quot; und &quot;Schu&szlig;waffen&quot; +1";
+         break;
+      case 13:
+         Monat = "Tsa";
+         Geschenke = "Charisma +1";
+         break;
+      case 14:
+      case 15:
+      case 16:
+         Monat = "Phex";
+         Geschenke = "Talente &quot;Taschendiebstahl&quot; und &quot;Schleichen&quot; +1";
+         break;
+      case 17:
+         Monat = "Peraine";
+         Geschenke = "Talent &quot;Heilkunde Krankheiten und Wunden&quot; +1";
+         break;
+      case 18:
+         Monat = "Ingerimm";
+         Geschenke = "Talent &quot;Stumpfe Hiebwaffen&quot; +1";
+         break;
+      case 19:
+      case 20:
+         Monat = "Rhaja";
+         Geschenke = "Talente &quot;Bet&ouml;ren&quot;, &quot;Tanzen&quot; und &quot;Musizieren&quot; +1";
+         break;
+   }
+
+   /*Ausgabe*/
+   if(document.all)
+   {
+      document.all.geburtstag.innerHTML = Tag + ". " + Monat;
+      document.all.goettergeschenke.innerHTML = Geschenke;
+   }
+   else if(document.layers)
+   {
+      document.netscape_geburtstag.document.open();
+      document.netscape_geburtstag.document.write(Tag + ". " + Monat);
+      document.netscape_geburtstag.document.close();
+
+      document.netscape_goettergeschenke.document.open();
+      document.netscape_goettergeschenke.document.write(Geschenke);
+      document.netscape_goettergeschenke.document.close();
+   }
+}
+//-->
+</script>
+</head>
+
+<body>
+<h2>Geboren am ...</h2>
+<h4>Ausw&uuml;rfeln von Heldengeburtstag und G&ouml;ttergeschenken</h4>
+<p>Ein neuer Held entsteht. Doch auf Dere kommen diselbige nicht aus dem Nichts, sondern werden irgendwann einmal geboren. Damit man sich das Ausw&uuml;rfeln des Geburtstags ersparen kann, &uuml;bernimmt das diese Seite. Praktischerweise werden die G&ouml;ttergeschenke gleich mit angezeigt. Dazu musst du nur den folgenden Knopf dr&uuml;cken:</p>
+
+<table cellpadding="15" >
+<tr>
+ <td><form><input type=button value="Neuer Geburtstag" onClick="neuer_Heldengeburtstag()"> </form></td>
+ <td><div id="geburtstag"></div>
+     <layer id="netscape_geburtstag"></layer><br>
+     <div id="goettergeschenke"></div>
+     <layer id="netscape_goettergeschenke"></layer> </td>
+</tr>
+</table>
+
+<p>     Dieses Tool stammt von <a href="mailto:mail@stefan-birkner.de">Stefan Birkner</a>, und auf dessen <a href="http://www.stefan-birkner.de">Homepage</a> zum Download zur Verf&uuml;gung.</p>
+
+<p>Hinweis: Das Schwarze Auge ist ein Rollenspiel von <a href="http://www.fanpro.com/dsa">FanPro</a>.</p>
+</body>
+</html>

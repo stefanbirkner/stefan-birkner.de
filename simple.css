@@ -1,0 +1,28 @@
+body {
+  background-color:#2e2e2e;
+  color:white;
+  font-family:'Voces',cursive;
+  margin:0;
+  padding:2em 1em 1em 1em;
+}
+h1 {
+  border-bottom:0.5em solid #ff7f00;
+  letter-spacing:0.1em;
+  margin-top:0;
+}
+ul {
+  line-height:2em;
+  list-style:none;
+}
+a {
+  color:white;
+  padding:2px;
+}
+a:hover {
+  background-color:#ff7f00;
+}
+.breadcrumbs {
+  font-size:0.8em;
+  font-weight:bold;
+  margin-bottom:1em;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head> 
+		<title>Information Retrieval 2010</title>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Vorlesung Information Retrieval an der HWR Berlin im Jahr 2010" /> 
+		<meta name="author" content="Stefan Birkner" /> 
+		<meta name="keywords" content="Information Retrieval, Vorlesung, HWR Berlin, 2010, Übung, Sprache, erkennen, ngramm" /> 
+		<link rel="stylesheet" type="text/css" href="../reset-min.css" />
+		<link rel="stylesheet" type="text/css" href="../sb.css" /> 
+	</head>
+
+	<body>
+		<nav class="breadcrumb">
+			<a href="/">Stefan Friedrich Birkner</a>
+			&gt; <a href="index.html">Information Retrieval 2010</a>
+			&gt; Übung Sprache erkennen
+		</nav>
+
+		<header>
+			<h2>Übung Sprache erkennen</h2>
+		</header>
+		<article>
+			<section>
+				<p>An Hand der Häufigkeitsverteilung der n-Gramme lässt sich beurteilen, in welcher Sprache ein Dokument verfasst ist. Dazu vergleicht man dessen Häufigkeitsverteilung mit der eine Textkorpus, von dem man die Sprache kennt. Bei ähnlicher Verteilung kann man davon ausgehen, dass die Sprache gleich ist.</p>
+				<p>In dieser Übung können Sie das in zwei Aufgaben ausprobieren. Die Dokumente finden Sie im Zip-Archiv <a href="http://dl.dropbox.com/u/6171799/Ngram.zip">Ngram.zip</a>. Die Ermittlung der Häufigkeitsverteilung nimmt Ihnen das Programm <a href="http://iti-ngram.googlecode.com/files/iti-ngram-0.9.2.jar">iti-ngram</a> ab. Nach dem Herunterladen können Sie das Programm mit einem Doppelklick starten.</p>
+			</section>
+
+			<section>
+				<h3>Sprache einer vorgegebenen Verteilung</h3>
+				<p>Im Zip-Archiv finden Sie die beiden Dateien deutsch.txt und englisch.txt mit jeweils einem Text in der entsprechenden Sprache. Ermitteln Sie die Verteilung der 3-Gramme. Ein weiterer Text wurde bereits analysiert. Dessen sechs häufigste 3-Gramme zusammen mit ihren Häufigkeiten finden sich in der folgenden Tabelle.
+				</p>
+				<table>
+					<tr>
+						<th>3-Gramm</th>
+						<th>Häufigkeit</th>
+					</tr>
+					<tr>
+						<td>en[Leerzeichen]</td>
+						<td>2,8 %</td>
+					</tr>
+					<tr>
+						<td>er[Leerzeichen]</td>
+						<td>1,3 %</td>
+					</tr>
+					<tr>
+						<td>nd[Leerzeichen]</td>
+						<td>1,2 %</td>
+					</tr>
+					<tr>
+						<td>ie[Leerzeichen]</td>
+						<td>1,1 %</td>
+					</tr>
+					<tr>
+						<td>gen</td>
+						<td>1,0 %</td>
+					</tr>
+					<tr>
+						<td>ich</td>
+						<td>0,9 %</td>
+					</tr>
+				</table>
+				<p>Vergleichen Sie diese Häufigkeiten mit denen der deutschen und englischen Texte. Wurde der Text mit der obigen Häufigkeitsverteilung in deutscher oder englischer Sprache verfasst?</p>
+			</section>
+
+			<section>
+				<h3>Sprache eines vorgegebenen Dokuments</h3>
+				<p>Im Zip-Archiv finden Sie die beiden Dateien norwegisch.txt und schwedisch.txt mit jeweils einem Text in der entsprechenden Sprache. Des Weiteren enthält das Archiv eine Datei unbekannt.txt, von der bekannt ist, dass sie einen norwegischen oder schwedischen Text enthält. Ermitteln Sie die Verteilung der n-Gramme und finden Sie durch Vergleichen heraus, ob der Text in Norwegisch oder Schwedisch verfasst wurde.</p>
+			</section>
+		</article>
+	</body>
+</html>

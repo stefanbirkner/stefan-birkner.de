@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=1024, user-scalable=no">
+
+  <title>Readme Driven Development</title>
+
+  <!-- Required stylesheet -->
+  <link rel="stylesheet" media="screen" href="/css/deck.core.min.css">
+
+  <!-- Extension CSS files go here. Remove or add as needed. -->
+  <link rel="stylesheet" media="screen" href="/css/deck.goto.min.css">
+  <link rel="stylesheet" media="screen" href="/css/deck.navigation.min.css">
+  <link rel="stylesheet" media="screen" href="/css/deck.scale.min.css">
+
+  <!-- Style theme. More available in /themes/style/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="/css/swiss.min.css">
+
+  <!-- Transition theme. More available in /themes/transition/ or create your own. -->
+  <link rel="stylesheet" media="screen" href="/css/horizontal-slide.min.css">
+
+  <!-- Required Modernizr file -->
+  <script src="/js/modernizr.custom.min.js"></script>
+</head>
+<body>
+  <div class="deck-container">
+    <section class="slide">
+      <h1>Readme Driven Development</h1>
+    </section>
+
+    <section class="slide">
+      <img src="images/no-doc.png" width="100%" height="100%"/>
+    </section>
+
+    <section class="slide" style="background-image: url(images/one.jpeg);background-repeat:no-repeat;">
+      <p style="font-size:5em;margin-top:1em;">Write your Readme first.</p>
+    </section>
+
+    <section class="slide">
+      <img src="images/quaidan.png" width="100%" height="100%"/>
+    </section>
+
+    <section class="slide">
+      <h2>Readme</h2>
+      <ul>
+        <li>Must not be complete.</li>
+        <li>Designed to be read by the user.</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Content</h2>
+      <ul>
+        <li>What problem is solved</li>
+        <li>Getting Started</li>
+        <li>Usage</li>
+        <li>Contribute</li>
+        <li>Development Guide</li>
+        <li>Release Guide</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <p style="font-size:5em;margin-top:1em;text-align:center;">How To</p>
+    </section>
+
+    <section class="slide" style="background-image: url(images/pen%20and%20paper.jpeg);background-size:cover;">
+      <p style="font-size:5em;margin-top:1em;text-align:center;color:white;">Pen And Paper</p>
+    </section>
+
+    <section class="slide" style="background-image: url(images/markdown.png);background-size:cover;">
+      <p style="font-size:5em;margin-top:1em;text-align:center;color:white;">Markdown</p>
+    </section>
+
+    <section class="slide" style="background-image: url(images/night.jpeg);background-size:cover;">
+      <p style="font-size:5em;margin-top:1em;text-align:center;color:white;">1 Day, 1 Night</p>
+    </section>
+
+    <section class="slide">
+      <p style="font-size:5em;margin-top:1em;text-align:center;">Build It</p>
+    </section>
+
+    <section class="slide" style="background-image: url(images/test.png);background-size:cover;">
+      <p style="font-size:5em;margin-top:1em;text-align:center;color:white;">API-Doc, Tests</p>
+    </section>
+
+    <section class="slide">
+      <p style="font-size:5em;margin-top:1em;text-align:center;">Advantages</p>
+    </section>
+
+    <section class="slide" style="background-image: url(images/path.jpeg);background-size:cover;background-position:bottom center;">
+      <p style="font-size:5em;margin-top:1em;text-align:center;color:white;">Purposeful Development</p>
+    </section>
+
+    <section class="slide" style="background-image: url(images/free%20your%20mind.jpeg);background-size:cover;">
+      <p style="font-size:5em;margin-top:1em;text-align:center;color:black;">Free Your Mind</p>
+    </section>
+
+    <section class="slide" style="background-image: url(images/documentation.jpeg);background-size:cover;">
+      <p style="font-size:5em;margin-top:1em;text-align:center;color:white;">Documentation</p>
+    </section>
+
+    <div aria-role="navigation">
+      <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
+      <a href="#" class="deck-next-link" title="Next">&#8594;</a>
+    </div>
+
+    <!-- deck.goto snippet -->
+    <form action="../../../../" method="get" class="goto-form">
+      <label for="goto-slide">Go to slide:</label>
+      <input type="text" name="slidenum" id="goto-slide" list="goto-datalist">
+      <datalist id="goto-datalist"></datalist>
+      <input type="submit" value="Go">
+    </form>
+
+    <!-- End extension snippets. -->
+  </div>
+
+<!-- Required JS files. -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/deck.core.min.js"></script>
+
+<!-- Extension JS files. Add or remove as needed. -->
+<script src="/js/deck.goto.min.js"></script>
+<script src="/js/deck.navigation.min.js"></script>
+<script src="/js/deck.scale.min.js"></script>
+
+<!-- Initialize the deck. You can put this in an external file if desired. -->
+<script>
+  $(function() {
+    $.deck('.slide');
+  });
+</script>
+</body>
+</html>

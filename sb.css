@@ -1,0 +1,104 @@
+/* file:                 sb.css                                        */ 
+/* author:               Stefan Birkner                                */
+/* abstract:             Dies ist die css-Datei die ich als Basis für  */
+/*                       meine Web-Seiten verwende.                    */ 
+ 
+body {
+	background-color : #ffffff; 
+	margin:0px; 
+	margin-bottom:10px; 
+	padding:20px;
+	padding-top:5px; }
+ 
+p,h1,h2,h3,h4,ul,ol,li,div,td,th,i,form,nav {
+	color:#303030; 
+	font-family: Helvetica,Arial,sans-serif;
+	font-size:11pt;
+	font-weight:normal; }
+
+h1,h2,h3,h4,h5,h6,a {
+	color:#000000; }
+
+form,h1,h2,h3,h4,h5,h6,p,ul {
+	padding-top: 2pt;
+	padding-bottom: 2pt;
+	margin: 0px; }
+
+form,p {
+	text-align:justify;
+	padding-right: 5pt;
+	padding-left: 5pt; }
+
+h1,h2,h3,h4,h5,h6 {
+	margin-top: 3pt;
+	padding-right: 2pt;
+	padding-left: 2pt; }
+
+h1 {
+	font-family: Times,'Times New Roman',serif;
+	font-size:30pt;
+	font-stretch:wider;
+	font-variant:small-caps;
+	font-weight:normal;
+	letter-spacing:0.1em;
+	text-align:center;
+	margin-top:0.5em;
+	margin-bottom:0.1em;
+	border-style:none;
+}
+
+h2 {
+	font-size:20pt;
+	font-weight:bold; 
+	border-bottom-style:solid;
+	border-bottom-color:#000000;
+	border-bottom-width:medium;
+	margin-bottom: 5pt; 
+	padding-top:5px; }
+
+h3 {
+	font-size:16pt;
+	margin-bottom:4pt;
+	margin-top:16pt; } 
+
+h4 { font-size:14pt; } 
+h5 { font-size:12pt; } 
+h6 { font-size:11pt; } 
+
+header { margin-bottom:1em; }
+
+td, th {
+	vertical-align: top;
+	padding-left:3pt;
+	padding-right:3pt;
+}
+
+td.history { color:#32e632; 
+             font-size:8pt; } 
+ 
+td.background { background-color:#c89632; 
+                color:#000000;  }
+
+img { border:0; } 
+
+a { text-decoration:none;
+    font-weight:bold; }
+  
+a:hover { background-color:#ff9090; }
+
+ul {
+	padding-left:1em;
+	padding-right:0.5em; }
+
+.breadcrumb {
+	padding-left:0;
+}
+
+.raised {
+	background-color: #eeeeee;
+	border-color:#dddddd; 
+	border-style:solid; 
+	border-width:1px;
+	margin: 5pt;
+	margin-bottom:12pt; 
+}
