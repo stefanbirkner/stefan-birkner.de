@@ -7,7 +7,7 @@ module.exports = function(grunt) {
         cwd: 'target'
       },
       clone_deploy_repo: {
-        command: 'rm -rf target;git clone git@github.com:stefanbirkner/stefanbirkner.github.io.git target'
+        command: 'rm -rf target;git clone -b gh-pages git@github.com:stefanbirkner/stefan-birkner.de.git target'
       },
       deploy_to_github: {
         command: 'git add .;cat ../revision | xargs -i echo "Revision stefanbirkner/stefan-birkner.de@"{} | xargs -i git commit -m "{}"; git push',
