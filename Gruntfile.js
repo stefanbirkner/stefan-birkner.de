@@ -21,14 +21,18 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'bower_components/font-awesome-bower',
           src: 'fonts/*',
-          dest:'dist/'
-        }, {
-          expand: true,
-          cwd: 'bower_components',
-          src: '**/*.css',
-          flatten: true,
-          dest:'dist/css/'
+          dest: 'dist/'
         }]
+      }
+    },
+    cssmin: {
+      minify: {
+        expand: true,
+        cwd: 'bower_components',
+        src: ['**/*.css', '!**/*.min.css'],
+        flatten: true,
+        dest: 'dist/css/',
+        ext: '.min.css'
       }
     },
     jekyll: {
@@ -50,7 +54,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-build-control');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-jekyll');
-  grunt.registerTask('default', ['jekyll:package', 'copy:dist', 'jekyll:serve']);
-  grunt.registerTask('deploy', ['jekyll:package', 'copy:dist', 'buildcontrol:pages']);
+  grunt.registerTask('default', ['jekyll:package', 'cssmin:minify', 'copy:dist', 'jekyll:serve']);
+  grunt.registerTask('deploy', ['jekyll:package', 'cssmin:minify', 'copy:dist', 'buildcontrol:pages']);
 };
