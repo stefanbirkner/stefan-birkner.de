@@ -2,7 +2,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     buildcontrol: {
       options: {
-        dir: 'target',
+        dir: 'dist',
         commit: true,
         push: true,
         message: 'Revision stefanbirkner/stefan-birkner.de@%sourceCommit%'
@@ -14,34 +14,34 @@ module.exports = function(grunt) {
         }
       }
     },
-    clean: ['node_modules', 'target', '_site'],
+    clean: ['node_modules', 'dist', '_site'],
     copy: {
       dist: {
         files: [{
           expand: true,
           cwd: 'bower_components/font-awesome-bower',
           src: 'fonts/*',
-          dest:'target/'
+          dest:'dist/'
         }, {
           expand: true,
           cwd: 'bower_components',
           src: '**/*.css',
           flatten: true,
-          dest:'target/css/'
+          dest:'dist/css/'
         }]
       }
     },
     jekyll: {
       serve: {
         options: {
-          src: 'target',
+          src: 'dist',
           serve: true
         }
       },
       package: {
         options: {
           src: 'app',
-          dest: 'target'
+          dest: 'dist'
         }
       }
     }
