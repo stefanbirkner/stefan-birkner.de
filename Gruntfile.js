@@ -18,7 +18,7 @@ module.exports = function(grunt) {
     jekyll: {
       serve: {
         options: {
-          src: 'app',
+          src: 'target',
           serve: true
         }
       },
@@ -34,6 +34,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-build-control');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-jekyll');
-  grunt.registerTask('default', ['jekyll:serve']);
+  grunt.registerTask('default', ['jekyll:package', 'jekyll:serve']);
   grunt.registerTask('deploy', ['jekyll:package', 'buildcontrol:pages']);
 };
