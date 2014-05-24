@@ -5,7 +5,7 @@ module.exports = function(grunt) {
         dir: 'target',
         commit: true,
         push: true,
-        message: 'Revision stfanbirkner/stefan-birkner.de@%sourceCommit%'
+        message: 'Revision stefanbirkner/stefan-birkner.de@%sourceCommit%'
       },
       pages: {
         options: {
