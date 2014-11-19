@@ -22,6 +22,12 @@ module.exports = function(grunt) {
           cwd: 'bower_components/font-awesome-bower',
           src: 'fonts/*',
           dest: 'dist/'
+        }, {
+          expand: true,
+          cwd: 'bower_components',
+          src: ['**/*.min.js'],
+          flatten: true,
+          dest: 'dist/js/'
         }]
       }
     },
@@ -32,8 +38,19 @@ module.exports = function(grunt) {
         src: ['**/*.css', '!**/*.min.css'],
         flatten: true,
         dest: 'dist/css/',
-        ext: '.min.css'
+        ext: '.min.css',
+        extDot: 'last'
       }
+    },
+    image_resize: {
+      resize: {
+        options: {
+          width: 200
+        },
+        files: {
+          'dist/se/readme-driven-development/images/book.jpeg' : 'app/se/readme-driven-development/images/documentation.jpeg'
+        }
+      }        
     },
     jekyll: {
       serve: {
@@ -48,6 +65,19 @@ module.exports = function(grunt) {
           dest: 'dist'
         }
       }
+    },
+    uglify: {
+      minify: {
+        expand: true,
+        cwd: 'bower_components',
+        force: true,
+        src: ['**/*.js', '!**/*.min.js'],
+        filter: 'isFile',
+        flatten: true,
+        dest: 'dist/js/',
+        ext: '.min.js',
+        extDot: 'last'
+      }
     }
   });
 
@@ -55,7 +85,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
+  grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-image-resize');
   grunt.loadNpmTasks('grunt-jekyll');
-  grunt.registerTask('default', ['jekyll:package', 'cssmin:minify', 'copy:dist', 'jekyll:serve']);
-  grunt.registerTask('deploy', ['jekyll:package', 'cssmin:minify', 'copy:dist', 'buildcontrol:pages']);
+  grunt.registerTask('default', ['jekyll:package', 'cssmin:minify', 'uglify:minify', 'image_resize:resize', 'copy:dist', 'jekyll:serve']);
+  grunt.registerTask('deploy', ['jekyll:package', 'cssmin:minify', 'uglify:minify', 'image_resize:resize', 'copy:dist', 'buildcontrol:pages']);
 };
