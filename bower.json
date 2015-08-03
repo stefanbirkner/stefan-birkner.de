@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "dependencies": {
         "deck.js": "~1.1.0",
-        "font-awesome-bower": "~4.2.0",
+        "font-awesome-bower": "~4.4.0",
         "normalize-css": "~3.0.2"
     }
 }
