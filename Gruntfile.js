@@ -19,8 +19,13 @@ module.exports = function(grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: 'bower_components/font-awesome-bower',
+          cwd: 'node_modules/font-awesome',
           src: 'fonts/*',
+          dest: 'dist/'
+        }, {
+          expand: true,
+          cwd: 'node_modules/font-awesome',
+          src: 'css/*.min.css',
           dest: 'dist/'
         }, {
           expand: true,
