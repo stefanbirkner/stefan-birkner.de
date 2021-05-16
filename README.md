@@ -1,7 +1,9 @@
 stefan-birkner.de
 =================
 
-This is the project for the website http://stefan-birkner.de. It uses the TaskRunner [Grunt](http://gruntjs.com/).
+This is the project for the website http://stefan-birkner.de. It uses the
+TaskRunner [Grunt](http://gruntjs.com/) and the static site generator
+[Hugo](https://gohugo.io).
 
 Serving the page at localhost
 -----------------------------
@@ -11,7 +13,7 @@ You can see the website at http://localhost:4000 if you run Grunt.
     npm install
     grunt
 
-The default task uses Jekyll to serve the site.
+The default task uses Hugo to serve the site.
 
 Deployment
 ----------

@@ -47,6 +47,10 @@ module.exports = function(grunt) {
         extDot: 'last'
       }
     },
+    exec: {
+      serve: "cd app;hugo serve",
+      package: "rm -r dist;mkdir -p dist;cd app;hugo;mv public/* ../dist/"
+    },
     image_resize: {
       resize: {
         options: {
@@ -54,23 +58,9 @@ module.exports = function(grunt) {
           width: 200
         },
         files: {
-          'dist/se/readme-driven-development/images/book.jpeg' : 'app/se/readme-driven-development/images/documentation.jpeg'
+          'dist/se/readme-driven-development/images/book.jpeg' : 'app/static/se/readme-driven-development/images/documentation.jpeg'
         }
       }        
-    },
-    jekyll: {
-      serve: {
-        options: {
-          src: 'dist',
-          serve: true
-        }
-      },
-      package: {
-        options: {
-          src: 'app',
-          dest: 'dist'
-        }
-      }
     },
     uglify: {
       minify: {
@@ -92,8 +82,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-exec');
   grunt.loadNpmTasks('grunt-image-resize');
-  grunt.loadNpmTasks('grunt-jekyll');
-  grunt.registerTask('default', ['jekyll:package', 'cssmin:minify', 'uglify:minify', 'image_resize:resize', 'copy:dist', 'jekyll:serve']);
-  grunt.registerTask('deploy', ['jekyll:package', 'cssmin:minify', 'uglify:minify', 'image_resize:resize', 'copy:dist', 'buildcontrol:pages']);
+  grunt.registerTask('default', ['cssmin:minify', 'uglify:minify', 'image_resize:resize', 'copy:dist', 'exec:serve']);
+  grunt.registerTask('deploy', ['exec:package', 'cssmin:minify', 'uglify:minify', 'image_resize:resize', 'copy:dist', 'buildcontrol:pages']);
 };
