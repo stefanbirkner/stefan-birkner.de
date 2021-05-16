@@ -1,0 +1,10 @@
+baseURL = "https://www.stefan-birkner.de/"
+disableHugoGeneratorInject = true
+disableKinds = ["RSS", "sitemap", "taxonomy", "term"]
+disablePathToLower = true
+languageCode = "en-us"
+title = "Stefan Birkner's Website"
+
+
+[markup.goldmark.renderer]
+unsafe= true

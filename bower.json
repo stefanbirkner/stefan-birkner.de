@@ -2,7 +2,6 @@
     "name": "stefan-birkner.de",
     "version": "0.1.0",
     "dependencies": {
-        "deck.js": "~1.1.0",
-        "normalize-css": "~4.0.0"
+        "deck.js": "~1.1.0"
     }
 }

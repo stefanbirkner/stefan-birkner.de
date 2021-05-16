@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ .Params.language }}">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ .Params.title }}</title>
+    {{ if .Params.description }}<meta name="description" content="{{ .Params.description }}">{{ end }}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ $normalize := resources.Get "normalize.css" | resources.Fingerprint }}
+    <link rel="stylesheet" href="{{ $normalize.Permalink }}">
+    <link rel="stylesheet" type="text/css" href="/list.css">
+    {{ if .Params.additional_stylesheet }}<link rel="stylesheet" type="text/css" href="{{ .Params.additional_stylesheet }}">{{ end }}
+    <link href="https://fonts.googleapis.com/css?family=Voces" rel="stylesheet" type="text/css">
+    {{ partial "author.html" . }}
+  </head> 
+  <body {{ if .Params.itemtype }} itemscope itemtype="{{ .Params.itemtype }}"{{ end }}>
+    {{ .Content }}
+  </body>
+</html>
