@@ -14,7 +14,7 @@ title: Mathematik
   <ul>
     <li><a href="koordinatensystem.php">Bilder von Koordinatensystemen generieren</a></li>
     <li><a href="ortskurve.html">Ortskurven mit Gnuplot zeichnen</a></li>
-    <li><a href="komplexe_zahlen.php">Umrechnung komplexer Zahlen</a></li>
+    <li><a href="komplexe_zahlen">Umrechnung komplexer Zahlen</a></li>
   </ul>
 
   <p>Meine Bachelorarbeit</p>
