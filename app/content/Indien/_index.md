@@ -4,9 +4,7 @@ language: de
 title: Indienreise
 description: Reisebeschreibung des Indienreise von Stefan Birkner 
 ---
-<p class="image">
-  <img src="TajMahal.jpeg" height="133" width="200" alt="Taj Mahal" />
-</p>
+{{< listimage "TajMahal.jpeg" "Taj Mahal" >}}
        
 <div class="content"> 
   <div class="breadcrumbs"><a href="/">Stefan Birkner</a></div>

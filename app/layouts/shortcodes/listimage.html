@@ -1,0 +1,5 @@
+<p class="image">
+  {{ $image := $.Page.Resources.GetMatch (.Get 0) }}
+  {{ $thumbnail := $image.Resize "200x" }}
+  <img src="{{ $thumbnail }}" height="{{ $thumbnail.Height }}" width="{{ $thumbnail.Width }}" alt="{{ .Get 1 }}" />
+</p>
