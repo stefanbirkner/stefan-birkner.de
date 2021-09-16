@@ -15,8 +15,9 @@
   </head> 
   <body >
     <p class="image">
-  {{ $image := .Page.Resources.GetMatch "documentation.jpeg" }}
-  <img src="{{ $image.Resize "200x133" }}" height="134" width="200" alt="A book" />
+  {{ $image := .Page.Resources.Get "documentation.jpeg" }}
+  {{ $thumbnail = $image.Resize "200x133" }}
+  <img src="{{ $thumbnail }}" height="134" width="{{ $thumbnail.Width }}" alt="A book" />
 </p>
 <div class="content"> 
   <div class="breadcrumbs">
