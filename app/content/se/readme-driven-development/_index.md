@@ -3,9 +3,7 @@ layout: list
 language: en
 title: Readme Driven Development 
 ---
-<p class="image">
-  <img src="images/book.jpeg" height="134" width="200" alt="A book" />
-</p>
+{{< listimage "documentation.jpeg" "A book" >}}
        
 <div class="content"> 
   <div class="breadcrumbs">
