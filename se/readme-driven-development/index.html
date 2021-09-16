@@ -16,7 +16,7 @@
   <body >
     <p class="image">
   {{ $image := $.Page.Resources.Get "documentation.jpeg" }}
-  {{ $thumbnail = $image.Resize "200x133" }}
+  {{ $thumbnail := $image.Resize "200x133" }}
   <img src="{{ $thumbnail }}" height="134" width="{{ $thumbnail.Width }}" alt="A book" />
 </p>
 <div class="content"> 
