@@ -27,3 +27,14 @@ Dependency Management
 ---------------------
 
 This project uses [Bower](http://bower.io/) for dependency management. Alle dependencies are stored in the project (`app/bower_components`) because we have no repository manager running. You add or change a dependency by adding or changing it in `bower.json`. Run `bower install` afterwards and check in the resolved dependencies.
+
+Font Awesome Icons
+------------------
+
+stefan-birkner.de uses icons of [Font Awesome](https://fontawesome.com/). You can add an icon to a page with the shortcut `fontawesome`. The following example adds GitHub's Octocat:
+
+    {{< icon github >}}
+
+Before you can use an icon you have to download the SVG file from https://github.com/FortAwesome/Font-Awesome/tree/master/svgs to the directory `app/fontawesome`.
+
+Thank you [Nick Galbreath](https://www.client9.com/) for your [tutorial](https://www.client9.com/using-font-awesome-icons-in-hugo/).

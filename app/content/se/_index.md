@@ -1,6 +1,5 @@
 ---
 layout: list
-additional_stylesheet: /css/font-awesome.min.css
 language: en
 title: Stefan Birkner – Software Development
 description: Information about the software development
@@ -14,16 +13,16 @@ description: Information about the software development
   <h1>Software Development</h1>
 
   <ul>
-    <li><i class="fa fa-github fa-fw"></i> <a href="https://github.com/stefanbirkner">Projects on Github</a></li>
-    <li><i class="fa fa-stack-overflow fa-fw"></i> <a href="http://stackoverflow.com/users/557091/stefan-birkner">Answers on Stack Overflow</a></li>
-    <li><i class="fa fa-twitter fa-fw"></i> <a href="https://twitter.com/StefanBirkner">Tweets on Twitter</a></li>
-    <li><i class="fa fa-university fa-fw"></i> <a href="/Information Retrieval 2010">Lecture: Information Retrieval (German, 2010)</a></li>
-    <li><i class="fa fa-info fa-fw"></i> <a href="readme-driven-development">Readme Driven Development</a></li>
+    <li>{{< icon github >}}<a href="https://github.com/stefanbirkner">Projects on Github</a></li>
+    <li>{{< icon stack-overflow >}}<a href="http://stackoverflow.com/users/557091/stefan-birkner">Answers on Stack Overflow</a></li>
+    <li>{{< icon twitter >}}<a href="https://twitter.com/StefanBirkner">Tweets on Twitter</a></li>
+    <li>{{< icon university >}}<a href="/Information Retrieval 2010">Lecture: Information Retrieval (German, 2010)</a></li>
+    <li>{{< icon info >}}<a href="readme-driven-development">Readme Driven Development</a></li>
   </ul>
 
   <h3>Profiles</h3>
   <ul>
-    <li><i class="fa fa-fw"></i><a href="http://careers.stackoverflow.com/stefanbirkner">Careers 2.0</a></li>
-    <li><i class="fa fa-linkedin fa-fw"></i><a href="http://de.linkedin.com/in/stefanbirkner/">LinkedIn</a></li>
-    <li><i class="fa fa-xing fa-fw"></i><a href="https://www.xing.com/profile/Stefan_Birkner3">XING</a></li>
+    <li>{{< icon stack-overflow >}}<a href="http://careers.stackoverflow.com/stefanbirkner">Careers 2.0</a></li>
+    <li>{{< icon linkedin >}}<a href="http://de.linkedin.com/in/stefanbirkner/">LinkedIn</a></li>
+    <li>{{< icon xing >}}<a href="https://www.xing.com/profile/Stefan_Birkner3">XING</a></li>
 </div>
