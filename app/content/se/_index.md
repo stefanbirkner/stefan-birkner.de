@@ -23,5 +23,4 @@ description: Information about the software development
   <h3>Profiles</h3>
   <ul>
     <li>{{< icon linkedin >}}<a href="http://de.linkedin.com/in/stefanbirkner/">LinkedIn</a></li>
-    <li>{{< icon xing >}}<a href="https://www.xing.com/profile/Stefan_Birkner3">XING</a></li>
 </div>
