@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+            integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+            crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    </head>
+    <body>
+        <div id="map" style="width: 1000px; height: 800px;"></div>
+        <script>
+            var map = L.map('map').setView([50.7, -4.5], 9);
+
+	const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+	}).addTo(map);
+
+    const hotels = [
+        {
+            name: "Mercure Paignton",
+            coordinates: [50.436738, -3.560987],
+            href: "https://all.accor.com/ssr/app/ibis/rates/B9E9/index.de.shtml?destination=cornwall-uk&compositions=2&dateIn=2025-09-17&dateOut=2025-09-21&nights=4&hideWDR=false&accessibleRoom=false"
+        },
+        {
+            name: "ibis Styles Paignton",
+            coordinates: [50.437179, -3.560863],
+            href: "https://all.accor.com/ssr/app/ibis/rates/B9G3/index.de.shtml?destination=cornwall-uk&compositions=2&dateIn=2025-09-17&dateOut=2025-09-21&nights=4&hideWDR=false&accessibleRoom=false"
+        },
+        {
+            name: "Mercure Exeter",
+            coordinates: [50.720631, -3.528677],
+            href: "https://all.accor.com/ssr/app/ibis/rates/6624/index.de.shtml?destination=cornwall-uk&compositions=2&dateIn=2025-09-17&dateOut=2025-09-21&nights=4&hideWDR=false&accessibleRoom=false"
+        },
+        {
+            name: "ibis Plymouth",
+            coordinates: [50.395923, -4.095760],
+            href: "https://all.accor.com/ssr/app/ibis/rates/2093/index.de.shtml?destination=cornwall-uk&compositions=2&dateIn=2025-09-17&dateOut=2025-09-21&nights=4&hideWDR=false&accessibleRoom=false"
+        },
+        {
+            name: "Laston House",
+            coordinates: [51.206305, -4.110247],
+            href: "https://www.booking.com/hotel/gb/laston-house.de.html"
+        },
+
+    ];
+    hotels.forEach(hotel => L.marker(hotel.coordinates)
+        .addTo(map)
+        .bindPopup('<b><a href="' + hotel.href + '" target="_blank">' + hotel.name + '</a></b>'));
+
+    restaurants = [
+        {
+            name: "mount pleasent eco park",
+            coordinates: [50.276300, -5.234588],
+            href: "https://www.mpecopark.co.uk"
+        },
+        {
+            name: "sprout health foods",
+            coordinates: [50.413741, -5.084092],
+            href: "https://sprouthealth.co.uk/"
+        },
+    ]
+
+    restaurants.forEach(restaurant => L.marker(restaurant.coordinates)
+        .addTo(map)
+        .bindPopup('<b><a href="' + restaurant.href + '" target="_blank">' + restaurant.name + '</a></b>'));
+
+    pois = [
+        {
+            name: "Eden Project",
+            coordinates: [50.359677, -4.742610],
+            href: "https://www.edenproject.com/",
+            image: {
+                src: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a6/Eden_Project_Panorama_1.jpg/330px-Eden_Project_Panorama_1.jpg",
+                width: 160,
+                height: 57
+            }
+        },
+        {
+            name: "Lost Gardens of Heligan",
+            coordinates: [50.284534, -4.809244],
+            href: "https://www.heligan.com/",
+            image: {
+                src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/67/Heligan_Italian_Garden.JPG/330px-Heligan_Italian_Garden.JPG",
+                width: 160,
+                height: 107
+            }
+        },
+        {
+            name: "Tintagel",
+            coordinates: [50.668668, -4.762176],
+            href: "https://de.wikipedia.org/wiki/Tintagel_Castle",
+            image: {
+                src: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/Panor%C3%A1ma_krajiny_kolem_Tintagelu.jpg/330px-Panor%C3%A1ma_krajiny_kolem_Tintagelu.jpg",
+                width: 160,
+                height: 42
+            }
+        },
+        {
+            name: "The Japanese Garden",
+            coordinates: [50.455916, -4.998280],
+            href: "https://www.japanesegarden.co.uk",
+            image: {
+                src: "https://www.japanesegarden.co.uk/wp-content/uploads/2020/06/200262059_346986096928922_7066912748956152299_n(pp_w768_h960).jpg",
+                width: 46,
+                height: 57
+            }
+        },
+        {
+            name: "Geevor Tin Mine",
+            coordinates: [50.152555, -5.675576],
+            href: "https://geevor.com/",
+            image: {
+                src: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Geevor2.jpg/330px-Geevor2.jpg",
+                width: 320,
+                height: 240
+            }
+        },
+        {
+            name: "Kents Cavern",
+            coordinates: [50.467636, -3.502622],
+            href: "https://www.kents-cavern.co.uk/",
+            image: {
+                src: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Kents_Cavern_%287036%29.jpg/330px-Kents_Cavern_%287036%29.jpg",
+                width: 160,
+                height: 106
+            }
+        },
+        {
+            name: "National Marine Aquarium",
+            coordinates: [50.366740, -4.131101],
+            href: "https://www.national-aquarium.co.uk/",
+            image: {
+                src: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/National_Marine_Aquarium_Plymouth_Aquarium.jpg/330px-National_Marine_Aquarium_Plymouth_Aquarium.jpg",
+                width: 160,
+                height: 120
+            }
+        },
+        {
+            name: "Lundy",
+            coordinates: [51.17523, -4.66966],
+            href: "https://www.landmarktrust.org.uk/lundyisland/",
+            image: {
+                src: "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Puffin_%28Fratercula_arctica%29.jpg/250px-Puffin_%28Fratercula_arctica%29.jpg",
+                width: 120,
+                height: 120
+            }
+        },
+    ];
+    pois.forEach(poi => {
+        let popup;
+        if (poi.image)
+            popup = `<b><a href="${poi.href}" target="_blank">${poi.name}</a></b><br/><img src="${poi.image.src}" widht="${poi.image.width}" height="${poi.image.height}">`;
+        else
+            popup = `<b><a href="${poi.href}" target="_blank">${poi.name}</a></b>`;
+
+        L.marker(poi.coordinates).addTo(map).bindPopup(popup)
+    });
+    
+	function onMapClick(e) {
+		popup
+			.setLatLng(e.latlng)
+			.setContent(`You clicked the map at ${e.latlng.toString()}`)
+			.openOn(map);
+	}
+
+	map.on('click', onMapClick);
+        </script>
+    </body>
+</html>
