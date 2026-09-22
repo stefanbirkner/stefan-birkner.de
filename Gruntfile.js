@@ -9,7 +9,7 @@ module.exports = function(grunt) {
       },
       pages: {
         options: {
-          remote: 'git@github.com:stefanbirkner/stefan-birkner.de.git',
+          remote: 'https://github.com/stefanbirkner/stefan-birkner.de.git',
           branch: 'gh-pages'
         }
       }
