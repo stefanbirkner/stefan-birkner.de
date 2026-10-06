@@ -14,14 +14,19 @@ module.exports = function(grunt) {
         }
       }
     },
-    clean: ['node_modules', 'dist', '_site', 'app/static/lib'],
+    clean: ['node_modules', 'dist', '_site'],
     copy: {
-      lib: {
+      dist: {
         files: [{
           expand: true,
-          cwd: 'bower_components',
-          src: ['**'],
-          dest: 'app/static/lib/'
+          cwd: 'node_modules/reveal.js/dist',
+          src: ['reveal.js'],
+          dest: 'dist/js'
+        }, {
+          expand: true,
+          cwd: 'node_modules/reveal.js/dist',
+          src: ['reset.css', 'reveal.css', 'reveal.js', 'themes/white.css'],
+          dest: 'dist/css'
         }]
       }
     },
@@ -35,6 +40,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-exec');
-  grunt.registerTask('default', ['copy:lib', 'exec:serve']);
-  grunt.registerTask('deploy', ['copy:lib', 'exec:package', 'buildcontrol:pages']);
+  grunt.registerTask('default', ['copy:dist', 'exec:serve']);
+  grunt.registerTask('deploy', ['exec:package', 'copy:dist', 'buildcontrol:pages']);
 };
